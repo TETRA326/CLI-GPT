@@ -51,7 +51,8 @@ or use this if you are experiencing problems:
 bash ~/CLI-GPT/gpt
 ```
 This will give you a similar interface to talk to ChatGPT with. You can bookmark the tab to return later. Cloud Shell should recover your session.
-# Update
+
+### Update
 ```
 gpt-update
 ```
