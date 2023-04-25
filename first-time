@@ -11,8 +11,7 @@ chmod +x ./update
 
 echo "Welcome to the first time setup for CLI-GPT"
 
-echo "Please enter your OpenAI API key: "
-read key
+read -p "Please enter your OpenAI API key: " key
 
 # Replace the API key in gpt.py
 sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" gpt.py
