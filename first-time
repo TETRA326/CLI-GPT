@@ -11,6 +11,8 @@ P='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
 W='\033[0;37m'        # White
 
+echo -e "${Cyan}Welcome to the first time setup for CLI-GPT${Off}"
+
 # Install required packages
 # sudo apt-get update
 # sudo apt-get install python3-pip -y
@@ -20,18 +22,19 @@ pip3 install openai
 chmod +x ./gpt
 chmod +x ./update
 
-echo -e "${White}Welcome to the first time setup for CLI-GPT${Off}"
-
+echo -e "${Y}"
 read -p "Please enter your OpenAI API key: " key
+echo -e "${Off}"
 
 # Replace the API key in gpt.py
 sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" gpt.py
 
-echo "API key successfully updated in gpt.py"
+echo -e "${G}API key successfully updated in gpt.py${Off}"
 
+echo -e "${Cyan}Adding 'gpt' and 'update' aliases...${Off}"
 echo "alias gpt='python3 ~/CLI-GPT/gpt.py'" >> ~/.bashrc
 echo "alias gpt-update='python3 ~/CLI-GPT/update'" >> ~/.bashrc
 
-echo "Setup complete!"
+echo -e "${G}Setup complete!${Off}"
 
 source ~/.bashrc
