@@ -10,12 +10,12 @@ If you do not know how to do this, follow [THIS](https://www.youtube.com/watch?v
 Go to https://platform.openai.com/account/api-keys and make sure you are signed in. Then, create a new key by clicking '+ Create new secret key'.
 Give it any name and press 'Create secret key'. Click the copy button and save your key:
 
-![Copy button image](https://axispowers.rf.gd/source/images/copy.png)
+![Copy button image](https://github.com/TETRA326/CLI-GPT/blob/main/images/copy.png?raw=true)
 
 DO NOT GIVE YOUR KEY TO ANYONE.
 
 ### 3. Log into Google Cloud Shell
-Go to https://shell.cloud.google.com/ and click:
+Go to https://shell.cloud.google.com/
 Let the terminal at the bottom load.
 
 In the terminal, you should see something like: `account@cloudshell:~/`
