@@ -16,7 +16,7 @@ def get_bot_response(prompt, history):
     # Generate response based on concatenated prompt and history
     prompt = "\n".join([f"{h['user']}\n{h.get('bot', '')}" for h in history])
     response = openai.Completion.create(
-        engine="text-davinci-002",
+        engine="gpt-3.5-turbo",
         prompt=prompt,
         max_tokens=1024,
         n=1,
