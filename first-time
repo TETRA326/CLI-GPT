@@ -37,4 +37,5 @@ echo "alias gpt-update='bash ~/CLI-GPT/update'" >> ~/.bashrc
 
 echo -e "${G}Setup complete!${Off}"
 
+cd ~
 bash
