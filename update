@@ -4,5 +4,23 @@ rm -rf ~/CLI-GPT/
 
 git clone https://github.com/TETRA326/CLI-GPT.git
 sleep 10
-chmod +x ./first-time
-./first-time
+# Install required packages
+# sudo apt-get update
+# sudo apt-get install python3-pip -y
+pip3 install openai
+
+# Give script perms
+chmod +x ~/CLI-GPT/gpt
+chmod +x ~/CLI-GPT/update
+
+echo "Welcome to the CLI-GPT updater!"
+
+echo "Please enter your OpenAI API key: "
+read key
+
+# Replace the API key in gpt.py
+sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" gpt.py
+
+echo "API key successfully updated in gpt.py"
+
+echo "Update complete!"
