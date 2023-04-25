@@ -39,7 +39,7 @@ while True:
     user_input = input("You: ")
 
     # Check for exit command
-    if user_input.lower() == "exit":
+    if user_input.lower() == "exit" or user_input.lower() == "quit":
         break
 
     # Get bot response
