@@ -1,5 +1,4 @@
 #!/bin/bash
 
 # Run gpt.py
-cd ~/CLI-GPT
-python3 gpt.py
+python3 ~/CLI-GPT/gpt.py
