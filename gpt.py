@@ -2,7 +2,7 @@ import openai
 import os
 
 # Set up OpenAI API key
-#openai.api_key = "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"
+
 openai.api_key = ""
 
 # Initialize history
