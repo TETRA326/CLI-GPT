@@ -23,3 +23,5 @@ echo "alias gpt='python3 ~/CLI-GPT/gpt.py'" >> ~/.bashrc
 echo "alias gpt-update='python3 ~/CLI-GPT/update'" >> ~/.bashrc
 
 echo "Setup complete!"
+
+source ~/.bashrc
