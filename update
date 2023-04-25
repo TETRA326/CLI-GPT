@@ -1,5 +1,5 @@
-#/bin/bash
-
+#!/bin/bash
+cd ~
 rm -rf ~/CLI-GPT/
 
 git clone https://github.com/TETRA326/CLI-GPT.git
