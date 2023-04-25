@@ -1,0 +1,10 @@
+#/bin/bash
+
+rm gpt
+rm gpt.py
+rm first-time
+
+git clone https://github.com/TETRA326/CLI-GPT.git ~/
+sleep 10
+chmod +x ./first-time
+./first-time
