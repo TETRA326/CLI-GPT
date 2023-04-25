@@ -11,7 +11,7 @@ P='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
 W='\033[0;37m'        # White
 
-echo -e "${Cyan}Welcome to the first time setup for CLI-GPT${Off}"
+echo -e "${Cyan}Welcome to the first time setup for CLI-GPT!${Off}"
 
 # Install required packages
 # sudo apt-get update
