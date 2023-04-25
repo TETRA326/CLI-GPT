@@ -1,8 +1,6 @@
 # CLI-GPT
 Simple easy-to-setup way of using OpenAi's ChatGPT in Python, specifically for Google Cloud Shell.
 
-![Picture](/images/AxisGPT.png)
-
 ## Setup
 ### 1. Create an OpenAI Account
 If you do not know how to do this, follow [THIS](https://www.youtube.com/watch?v=0b49O19FyC8) tutorial.
