@@ -11,6 +11,7 @@ pip3 install openai
 
 # Give script perms
 chmod +x ./gpt
+chmod +x ./update
 
 echo "Welcome to the first time setup for CLI-GPT"
 
