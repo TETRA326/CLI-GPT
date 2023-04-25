@@ -33,7 +33,7 @@ echo -e "${G}API key successfully updated in gpt.py${Off}"
 
 echo -e "${Cyan}Adding 'gpt' and 'gpt-update' aliases...${Off}"
 echo "alias gpt='python3 ~/CLI-GPT/gpt.py'" >> ~/.bashrc
-echo "alias gpt-update='python3 ~/CLI-GPT/update'" >> ~/.bashrc
+echo "alias gpt-update='bash ~/CLI-GPT/update'" >> ~/.bashrc
 
 echo -e "${G}Setup complete!${Off}"
 
