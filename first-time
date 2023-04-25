@@ -27,7 +27,7 @@ read -p "Please enter your OpenAI API key ('CTRL + SHIFT + V' to paste): " key
 echo -e "${Off}"
 
 # Replace the API key in gpt.py
-sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" gpt.py
+sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" ~/CLI-GPT/gpt.py
 
 echo -e "${G}API key successfully updated in gpt.py${Off}"
 
