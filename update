@@ -1,8 +1,8 @@
 #/bin/bash
 
-rm -rf CLI-GPT
+rm -rf ~/CLI-GPT/
 
-git clone https://github.com/TETRA326/CLI-GPT.git ~/
+git clone https://github.com/TETRA326/CLI-GPT.git
 sleep 10
 chmod +x ./first-time
 ./first-time
