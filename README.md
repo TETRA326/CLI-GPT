@@ -9,15 +9,14 @@ If you do not know how to do this, follow [THIS](https://www.youtube.com/watch?v
 ### 2. Make a new API Key
 Go to https://platform.openai.com/account/api-keys and make sure you are signed in. Then, create a new key by clicking '+ Create new secret key'.
 Give it any name and press 'Create secret key'. Click the copy button and save your key:
+
 ![Copy button image](https://axispowers.rf.gd/source/images/copy.png)
+
 DO NOT GIVE YOUR KEY TO ANYONE.
 
 ### 3. Log into Google Cloud Shell
-Go to https://cloud.google.com/shell and click:
-![Go-To-Console button image](https://axispowers.rf.gd/source/images/gotoconsole.png)
-This will take you to your Cloud Shell Overview. If it is your first time in the Cloud Shell, you may have to accept Terms of Service and other legal documents.
-If it hasn't already appeared, open the Terminal using this button:
-![Open-Terminal button image](https://axispowers.rf.gd/source/images/console.png)
+Go to https://shell.cloud.google.com/ and click:
+Let the terminal at the bottom load.
 
 In the terminal, you should see something like: `account@cloudshell:~/`
 
@@ -56,3 +55,7 @@ This will give you a similar interface to talk to ChatGPT with. You can bookmark
 ```
 gpt-update
 ```
+
+
+## Support
+Join our public [Discord](https://discord.gg/NCXRYSmx2a) and mention @TΞTRΛ#9264 for any help.
