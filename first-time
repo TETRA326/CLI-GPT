@@ -23,7 +23,7 @@ chmod +x ~/CLI-GPT/gpt
 chmod +x ~/CLI-GPT/update
 
 echo -e "${Y}"
-read -p "Please enter your OpenAI API key: " key
+read -p "Please enter your OpenAI API key ('CTRL + SHIFT + V' to paste): " key
 echo -e "${Off}"
 
 # Replace the API key in gpt.py
