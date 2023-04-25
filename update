@@ -4,6 +4,20 @@ rm -rf ~/CLI-GPT/
 
 git clone https://github.com/TETRA326/CLI-GPT.git
 sleep 10
+
+Off='\033[0m'
+# Regular Colors
+Black='\033[0;30m'        # Black
+R='\033[0;31m'          # Red
+G='\033[0;32m'        # Green
+Y='\033[0;33m'       # Yellow
+B='\033[0;34m'         # Blue
+P='\033[0;35m'       # Purple
+Cyan='\033[0;36m'         # Cyan
+W='\033[0;37m'        # White
+
+echo -e "${Cyan}Welcome to updater for CLI-GPT${Off}"
+
 # Install required packages
 # sudo apt-get update
 # sudo apt-get install python3-pip -y
@@ -13,13 +27,13 @@ pip3 install openai
 chmod +x ~/CLI-GPT/gpt
 chmod +x ~/CLI-GPT/update
 
-echo "Welcome to the CLI-GPT updater!"
-
+echo -e "${Y}"
 read -p "Please enter your OpenAI API key: " key
+echo -e "${Off}"
 
 # Replace the API key in gpt.py
 sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" gpt.py
 
-echo "API key successfully updated in gpt.py"
+echo -e "${G}API key successfully updated in gpt.py${Off}"
 
-echo "Update complete!"
+echo -e "${G}Update complete!${Off}"
