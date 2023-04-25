@@ -20,7 +20,7 @@ pip3 install openai
 chmod +x ./gpt
 chmod +x ./update
 
-echo "Welcome to the first time setup for CLI-GPT"
+echo -e "${White}Welcome to the first time setup for CLI-GPT${Off}"
 
 read -p "Please enter your OpenAI API key: " key
 
