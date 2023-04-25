@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Run gpt.py
+python3 gpt.py

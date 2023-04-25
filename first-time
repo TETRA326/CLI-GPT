@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Install required packages
+sudo apt-get update
+sudo apt-get install python3-pip -y
+pip3 install openai
+
+# Download scripts
+wget https://axispowers.rf.gd/source/docs/scripts/gpt.py
+wget https://axispowers.rf.gd/source/docs/scripts/gpt
+
+# Give script perms
+chmod +x ./gpt
+
+# Prompt user for information
+echo "Please enter your OpenAi Secret Key. Remember to use CTRL+V to paste:"
+read input_info
+
+# Open the Python file in nano and paste the information at line 6, column 19
+nano +6,19 gpt.py <<EOF
+$input_info
+^X
+y
+EOF
+
+echo "API Key successfully implemented"
