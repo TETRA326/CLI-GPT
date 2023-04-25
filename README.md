@@ -20,7 +20,7 @@ Let the terminal at the bottom load.
 In the terminal, you should see something like: `account@cloudshell:~/`
 
 *Tip:*
-You can press the 'Editor' button to full-screen the Terminal:
+You can un-check the 'Editor' button to full-screen the Terminal:
 
 ![Close-Editor](/images/pencil.png)
 
