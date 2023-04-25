@@ -42,12 +42,12 @@ Press enter to continue.
 
 ## Using ChatGPT in the Terminal
 
-Run these 1 command:
+Run this 1 command:
 ```
 gpt
 ```
 or use this if you are experiencing problems:
 ```
-~/CLI-GPT/gpt
+bash ~/CLI-GPT/gpt
 ```
 This will give you a similar interface to talk to ChatGPT with. You can bookmark the tab to return later. Cloud Shell should recover your session.
