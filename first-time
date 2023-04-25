@@ -17,10 +17,6 @@ echo "Please enter your OpenAi Secret Key. Remember to use CTRL+V to paste:"
 read input_info
 
 # Open the Python file in nano and paste the information at line 6, column 19
-nano +6,19 gpt.py <<EOF
-$input_info
-^X
-y
-EOF
+printf "%s\n" "import openai" "" "openai.api_key = \"$api_key\"" > gpt.py
 
 echo "API Key successfully implemented"
