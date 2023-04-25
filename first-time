@@ -6,8 +6,8 @@ sudo apt-get install python3-pip -y
 pip3 install openai
 
 # Download scripts
-wget https://axispowers.rf.gd/source/docs/scripts/gpt.py
-wget https://axispowers.rf.gd/source/docs/scripts/gpt
+# wget https://axispowers.rf.gd/source/docs/scripts/gpt.py
+# wget https://axispowers.rf.gd/source/docs/scripts/gpt
 
 # Give script perms
 chmod +x ./gpt
