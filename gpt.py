@@ -1,8 +1,9 @@
 import openai
 import os
 
-# Set up OpenAI API key
+print("Hint: You can copy using 'CTRL + SHIFT + C' and paste using 'CTRL + SHIFT + V'")
 
+# Set up OpenAI API key
 openai.api_key = ""
 
 # Initialize history
