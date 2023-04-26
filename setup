@@ -32,7 +32,7 @@ sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" ~/CLI-GPT/gpt.py
 echo -e "${G}API key successfully updated in 'gpt.py'${Off}"
 
 # checks if the aliases are already present
-alias_check='$(alias -p | grep -om 1 "python3 ~/CLI-GPT/gpt.py")'
+alias_check=$(alias -p | grep -om 1 "python3 ~/CLI-GPT/gpt.py")
 if [ "$alias_check" == "python3 ~/CLI-GPT/gpt.py" ]; then
     echo -e "${Y}Aliases are already set!${Off}"
 else
