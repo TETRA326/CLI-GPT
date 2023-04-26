@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "Choose an option for the OpenAI engine (1-5): "
+echo "1. Davinci 3 (Recommended)"
+echo "2. Davinci 2"
+echo "3. Curie 1"
+echo "4. Babbage 1"
+echo "5. ADA 1"
+
+read choice
+
+case $choice in
+    1) engine="text-davinci-003";;
+    2) engine="text-davinci-002";;
+    3) engine="text-curie-002";;
+    4) engine="text-babbage-002";;
+    5) engine="text-ada-001";;
+    *) echo "Invalid choice"; exit 1;;
+esac
+
+# Update gpt.py with the chosen engine
+sed -i "s/engine=\".*\"/engine=\"$engine\"/" ~/CLI-GPT/gpt.py
+
+echo "Engine successfully updated to $engine in gpt.py"
