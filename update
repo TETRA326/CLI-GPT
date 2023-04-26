@@ -37,7 +37,7 @@ sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" /home/$USER/CLI-GPT/
 
 echo -e "${G}API key successfully updated in 'gpt.py'${Off}"
 
-echo -e "${G}Update complete!${Off}"
+echo -e "${G}Update complete!${Off}\n"
 echo -e "${B}Commands:"        
 echo -e "gpt           - begin ChatGPT conversation"
 echo -e "gpt-update    - update CLI-GPT code"
