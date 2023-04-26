@@ -1,13 +1,22 @@
 #!/bin/bash
+Off='\033[0m'
+# Regular Colors
+Black='\033[0;30m'        # Black
+R='\033[0;31m'          # Red
+G='\033[0;32m'        # Green
+Y='\033[0;33m'       # Yellow
+B='\033[0;34m'         # Blue
+P='\033[0;35m'       # Purple
+Cyan='\033[0;36m'         # Cyan
 
-echo "Choose an option for the OpenAI engine (1-5): "
-echo "1. Davinci 3 (Recommended)"
+echo -e "${B}Choose an option for the OpenAI engine${Off}"
+echo -e "${Cyan}1. Davinci 3 (Recommended)"
 echo "2. Davinci 2"
 echo "3. Curie 1"
 echo "4. Babbage 1"
-echo "5. ADA 1"
+echo -e "5. ADA 1 ${Y}"
 
-read choice
+read -p "Enter a number:" choice
 
 case $choice in
     1) engine="text-davinci-003";;
@@ -21,4 +30,4 @@ esac
 # Update gpt.py with the chosen engine
 sed -i "s/engine=\".*\"/engine=\"$engine\"/" ~/CLI-GPT/gpt.py
 
-echo "Engine successfully updated to $engine in gpt.py"
+echo -e "${G}Engine successfully updated to $engine in gpt.py${Off}"
