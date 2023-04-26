@@ -67,7 +67,7 @@ gpt-update
 ## Uninstall
 Follow these 2 commands:
 ```
-cd
+cd ~
 rm -rf CLI-GPT
 ```
 
