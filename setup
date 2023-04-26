@@ -33,13 +33,15 @@ sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" /home/$USER/CLI-GPT/
 
 echo -e "${G}API key successfully updated in 'gpt.py'${Off}"
 
-echo -e "${Cyan}Adding 'gpt' and 'gpt-update' aliases...${Off}"
 echo "alias gpt='python3 ~/CLI-GPT/gpt.py'" >> ~/.bashrc
 echo "alias gpt-update='bash ~/CLI-GPT/update'" >> ~/.bashrc
+echo "alias gpt-engine='bash ~/CLI-GPT/change-engine'" >> ~/.bashrc
 
 echo -e "${G}Setup complete!${Off}\n"
 echo -e "${B}### Commands:"        
 echo -e "gpt           - begin ChatGPT conversation"
-echo -e "gpt-update    - update CLI-GPT code${Off}"
+echo -e "gpt-update    - update CLI-GPT code"
+echo -e "gpt-engine    - change OpenAI engine${Off}"
+
 cd /home/$USER/
 bash
