@@ -56,12 +56,20 @@ bash ~/CLI-GPT/gpt
 ```
 This will give you a similar interface to talk to ChatGPT with. You can bookmark the tab to return later. Cloud Shell should recover your session.
 
+*Hint:* You can use the `clear` command to remove all the text in the terminal and clear your workspace.
+
 ## Update
 Run this every-so-often to make sure your code is up-to-date. Or, if you experience issues, you can run 'gpt-update' to reset everything. *Note: You will have to re-enter an Open AI Secret Key*
 ```
 gpt-update
 ```
 
+## Uninstall
+Follow these 2 commands:
+```
+cd
+rm -rf CLI-GPT
+```
 
 ## Support
 Join our public [Discord](https://discord.gg/NCXRYSmx2a) or DM TΞTRΛ#9264 for any help.
