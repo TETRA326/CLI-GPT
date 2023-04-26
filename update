@@ -25,15 +25,15 @@ pip3 install openai
 pip3 install colorama
 
 # Give script perms
-chmod +x ~/CLI-GPT/gpt
-chmod +x ~/CLI-GPT/update
+chmod +x /home/$USER/CLI-GPT/gpt
+chmod +x /home/$USER/CLI-GPT/update
 
 echo -e "${Y}"
 read -p "Please enter your OpenAI API key ('CTRL + SHIFT + V' to paste): " key
 echo -e "${Off}"
 
 # Replace the API key in gpt.py
-sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" ~/CLI-GPT/gpt.py
+sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" /home/$USER/CLI-GPT/gpt.py
 
 echo -e "${G}API key successfully updated in gpt.py${Off}"
 
