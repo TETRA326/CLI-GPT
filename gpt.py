@@ -47,7 +47,7 @@ while True:
         break
     elif user_input.lower() == "clear":
         print("\033c")
-        history.append({"user": prompt})
+        history.append({"user": user_input})
     else:
         # Get bot response
         bot_response = get_bot_response(user_input, history)
