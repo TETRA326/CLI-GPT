@@ -6,7 +6,7 @@ from colorama import Fore, Back, Style
 print(Fore.CYAN + "Hint: You can copy using 'CTRL + SHIFT + C' and paste using 'CTRL + SHIFT + V'" + Style.RESET_ALL)
 
 # Set up OpenAI API key
-openai.api_key = "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"
+openai.api_key = ""
 
 # Initialize history
 history = []
