@@ -33,13 +33,13 @@ git clone https://github.com/TETRA326/CLI-GPT.git
 When that is finished, run these commands:
 ```
 cd CLI-GPT
-chmod +x ./first-time
+chmod +x ./setup
 ```
 
-### 5. Run ./first-time and insert API Key
+### 5. Run ./setup and insert API Key
 Run this command:
 ```
-./first-time
+./setup
 ```
 When prompted, paste your OpenAI Secret Key. REMEMBER! Use `CTRL + SHIFT + V` to paste in the terminal.
 Press enter to continue.
@@ -57,7 +57,7 @@ bash ~/CLI-GPT/gpt
 This will give you a similar interface to talk to ChatGPT with. You can bookmark the tab to return later. Cloud Shell should recover your session.
 
 ## Update
-Run this every-so-often to make sure your code is up-to-date. Or, if you experience issues, you can run 'gpt-update' to reset everything. *Note: You will have to re-enter an Open AI Secret Key*
+Run this every-so-often to make sure your code is up-to-date. Or, if you experience issues, you can run 'gpt-update' to reset everything. After, updating running setup is not required. *Note: You will have to re-enter an Open AI Secret Key*
 ```
 gpt-update
 ```
