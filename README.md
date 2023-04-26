@@ -26,11 +26,11 @@ You can un-check the 'Editor' button to full-screen the Terminal:
 ![Close-Editor](/images/pencil.png)
 
 ### 4. Clone into Github Repo
-One-liner:
+Copy this command and paste it in the terminal. Press enter:
 ```
 git clone https://github.com/TETRA326/CLI-GPT.git; cd CLI-GPT; chmod +x ./setup; bash setup
 ```
-Follow this command:
+<!--Follow this command:
 ```
 git clone https://github.com/TETRA326/CLI-GPT.git
 ```
@@ -38,7 +38,7 @@ When that is finished, run these commands:
 ```
 cd CLI-GPT
 chmod +x ./setup
-```
+```-->
 
 ### 5. Run ./setup and insert API Key
 Run this command:
