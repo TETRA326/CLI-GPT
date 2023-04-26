@@ -22,6 +22,7 @@ echo -e "${Cyan}Welcome to updater for CLI-GPT!${Off}"
 # sudo apt-get update
 # sudo apt-get install python3-pip -y
 pip3 install openai
+pip3 install colorama
 
 # Give script perms
 chmod +x ~/CLI-GPT/gpt
