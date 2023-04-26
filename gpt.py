@@ -3,7 +3,9 @@ import os
 import colorama
 from colorama import Fore, Back, Style
 
-print(Fore.BLUE + "Commands: \nexit    - quit conversation \nclear   - clear the screen" + Style.RESET_ALL)
+print(Fore.BLUE + "Commands:")
+print("exit  [quit, x, q]    - quit conversation")
+print("clear                 - clear the screen")
 print(Fore.CYAN + "Hint: You can copy using 'CTRL + SHIFT + C' and paste using 'CTRL + SHIFT + V'" + Style.RESET_ALL)
 
 # Set up OpenAI API key
@@ -44,7 +46,7 @@ while True:
     user_input = input("You: ")
     print(Style.RESET_ALL)
     # Check for exit command
-    if user_input.lower() == "exit" or user_input.lower() == "quit" or user_input.lower() == "x":
+    if user_input.lower() == "exit" or user_input.lower() == "quit" or user_input.lower() == "x" or user_input.lower() == "q":
         break
     elif user_input.lower() == "clear":
         print("\033c")
