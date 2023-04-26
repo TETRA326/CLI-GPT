@@ -1,4 +1,4 @@
-![CLI-GPT Image](/images/CLI-GPT2.png)
+![CLI-GPT Image](/images/CLI-GPT3.png)
 
 Simple easy-to-setup way of using OpenAi's ChatGPT in Python, specifically for Google Cloud Shell.
 
