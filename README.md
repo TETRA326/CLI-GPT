@@ -64,4 +64,4 @@ gpt-update
 
 
 ## Support
-Join our public [Discord](https://discord.gg/NCXRYSmx2a) and mention @TΞTRΛ#9264 for any help.
+Join our public [Discord](https://discord.gg/NCXRYSmx2a) or DM TΞTRΛ#9264 for any help.
