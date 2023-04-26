@@ -43,11 +43,13 @@ while True:
     user_input = input("You: ")
     print(Style.RESET_ALL)
     # Check for exit command
-    if user_input.lower() == "exit" or user_input.lower() == "quit":
+   if user_input.lower() == "exit" or user_input.lower() == "quit":
         break
+    elif user_input.lower() == "clear":
+        print("\033c")
+    else:
+        # Get bot response
+        bot_response = get_bot_response(user_input, history)
 
-    # Get bot response
-    bot_response = get_bot_response(user_input, history)
-
-    # Print bot response
-    print(Back.GREEN + "ChatGPT:" + Style.RESET_ALL + Fore.GREEN, bot_response + Style.RESET_ALL)
+        # Print bot response
+        print(Back.GREEN + "ChatGPT:" + Style.RESET_ALL + Fore.GREEN, bot_response + Style.RESET_ALL)
