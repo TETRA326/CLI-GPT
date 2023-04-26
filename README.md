@@ -57,7 +57,7 @@ bash ~/CLI-GPT/gpt
 This will give you a similar interface to talk to ChatGPT with. You can bookmark the tab to return later. Cloud Shell should recover your session.
 
 ## Update
-Run this every-so-often to make sure your code is up-to-date. Or, if you experience issues, you can run 'gpt-update' to reset everything. After, updating running setup is not required. *Note: You will have to re-enter an Open AI Secret Key*
+Run this every-so-often to make sure your code is up-to-date. Or, if you experience issues, you can run 'gpt-update' to reset everything. After updating, running setup is not required. *Note: You will have to re-enter an Open AI Secret Key*
 ```
 gpt-update
 ```
