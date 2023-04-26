@@ -50,4 +50,4 @@ while True:
     bot_response = get_bot_response(user_input, history)
 
     # Print bot response
-    print(Back.GREEN + "ChatGPT: " + Style.RESET_ALL + Fore.GREEN, bot_response + Style.RESET_ALL)
+    print(Back.GREEN + "ChatGPT:" + Style.RESET_ALL + Fore.GREEN, bot_response + Style.RESET_ALL)
