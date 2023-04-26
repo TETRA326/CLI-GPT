@@ -5,7 +5,6 @@ rm -rf CLI-GPT/
 echo -e "${Cyan}Welcome to updater for CLI-GPT!${Off}"
 
 git clone https://github.com/TETRA326/CLI-GPT.git
-sleep 1
 
 Off='\033[0m'
 # Regular Colors
