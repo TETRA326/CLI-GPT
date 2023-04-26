@@ -6,7 +6,7 @@ from colorama import Fore, Back, Style
 print(Fore.BLUE + "Commands:")
 print("exit  [quit, x, q]    - quit conversation")
 print("clear                 - clear the screen")
-print("log   [history, l]    - shows the previous messages in the conversation"  + Style.RESET_ALL)
+print("log   [history]    - shows the previous messages in the conversation"  + Style.RESET_ALL)
 print(Fore.CYAN + "Hint: You can copy using 'CTRL + SHIFT + C' and paste using 'CTRL + SHIFT + V'" + Style.RESET_ALL)
 
 # Set up OpenAI API key
