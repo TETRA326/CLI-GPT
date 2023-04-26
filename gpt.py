@@ -20,7 +20,7 @@ def get_bot_response(prompt, history):
     prompt = "\n".join([f"{h['user']}\n{h.get('bot', '')}" for h in history])
     response = openai.Completion.create(
         engine="text-davinci-003",
-        prompt="You are a helpful AI. You will provide clear and concise answers to any question asked of you. Be kind in your speech and always use correct grammer."
+        prompt="You are a helpful AI. You will provide clear and concise answers to any question asked of you. Be kind in your speech and always use correct grammer.",
         max_tokens=1024,
         n=1,
         stop=None,
