@@ -13,7 +13,7 @@ W='\033[0;37m'        # White
 cd /home/$USER/
 rm -rf CLI-GPT/
 
-echo -e "${Cyan}Welcome to the updater for CLI-GPT!${Off}\n"
+echo -e "\n${Cyan}Welcome to the updater for CLI-GPT!${Off}\n"
 
 git clone https://github.com/TETRA326/CLI-GPT.git
 
