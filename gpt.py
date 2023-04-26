@@ -1,10 +1,12 @@
 import openai
 import os
+import colorama
+from colorama import Fore, Back, Style
 
-print("Hint: You can copy using 'CTRL + SHIFT + C' and paste using 'CTRL + SHIFT + V'")
+print(Fore.CYAN + "Hint: You can copy using 'CTRL + SHIFT + C' and paste using 'CTRL + SHIFT + V'" + Style.RESET_ALL)
 
 # Set up OpenAI API key
-openai.api_key = ""
+openai.api_key = "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"
 
 # Initialize history
 history = []
@@ -37,8 +39,9 @@ def get_bot_response(prompt, history):
 # Start conversation loop
 while True:
     # Get user input
+    print(Back.WHITE + Fore.BLACK)
     user_input = input("You: ")
-
+    print(Style.RESET_ALL)
     # Check for exit command
     if user_input.lower() == "exit" or user_input.lower() == "quit":
         break
@@ -47,4 +50,4 @@ while True:
     bot_response = get_bot_response(user_input, history)
 
     # Print bot response
-    print("ChatGPT: ", bot_response)
+    print(Back.GREEN + "ChatGPT: " + Style.RESET_ALL + Fore.GREEN, bot_response + Style.RESET_ALL)
