@@ -2,8 +2,10 @@
 cd /home/$USER/
 rm -rf CLI-GPT/
 
+echo -e "${Cyan}Welcome to updater for CLI-GPT!${Off}"
+
 git clone https://github.com/TETRA326/CLI-GPT.git
-sleep 10
+sleep 1
 
 Off='\033[0m'
 # Regular Colors
@@ -15,8 +17,6 @@ B='\033[0;34m'         # Blue
 P='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
 W='\033[0;37m'        # White
-
-echo -e "${Cyan}Welcome to updater for CLI-GPT!${Off}"
 
 # Install required packages
 # sudo apt-get update
