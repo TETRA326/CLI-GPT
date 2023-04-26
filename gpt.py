@@ -45,9 +45,9 @@ while True:
     # Check for exit command
    if user_input.lower() == "exit" or user_input.lower() == "quit":
         break
-    elif user_input.lower() == "clear":
+   elif user_input.lower() == "clear":
         print("\033c")
-    else:
+   else:
         # Get bot response
         bot_response = get_bot_response(user_input, history)
 
