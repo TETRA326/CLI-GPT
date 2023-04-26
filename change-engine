@@ -21,8 +21,8 @@ read -p "Enter a number:" choice
 case $choice in
     1) engine="text-davinci-003";;
     2) engine="text-davinci-002";;
-    3) engine="text-curie-002";;
-    4) engine="text-babbage-002";;
+    3) engine="text-curie-001";;
+    4) engine="text-babbage-001";;
     5) engine="text-ada-001";;
     *) echo "Invalid choice"; exit 1;;
 esac
