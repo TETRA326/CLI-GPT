@@ -26,6 +26,10 @@ You can un-check the 'Editor' button to full-screen the Terminal:
 ![Close-Editor](/images/pencil.png)
 
 ### 4. Clone into Github Repo
+One-liner:
+```
+git clone https://github.com/TETRA326/CLI-GPT.git; cd CLI-GPT; chmod +x ./setup; bash setup
+```
 Follow this command:
 ```
 git clone https://github.com/TETRA326/CLI-GPT.git
