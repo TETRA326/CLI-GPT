@@ -11,7 +11,7 @@ P='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
 W='\033[0;37m'        # White
 
-echo -e "${Cyan}Welcome to the first time setup for CLI-GPT!${Off}"
+echo -e "\n${Cyan}Welcome to the first time setup for CLI-GPT!${Off}\n"
 
 # Install required packages
 # sudo apt-get update
@@ -38,7 +38,7 @@ echo "alias gpt-update='bash ~/CLI-GPT/update'" >> ~/.bashrc
 echo "alias gpt-engine='bash ~/CLI-GPT/change-engine'" >> ~/.bashrc
 
 echo -e "${G}Setup complete!${Off}\n"
-echo -e "${B}### Commands:"        
+echo -e "${B}Commands:"        
 echo -e "gpt           - begin ChatGPT conversation"
 echo -e "gpt-update    - update CLI-GPT code"
 echo -e "gpt-engine    - change OpenAI engine${Off}"
