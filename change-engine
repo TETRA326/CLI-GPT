@@ -16,7 +16,7 @@ echo "3. Curie 1"
 echo "4. Babbage 1"
 echo -e "5. ADA 1 ${Y} \n"
 
-read -p "Enter a number:" choice
+read -p "Enter a number: " choice
 
 case $choice in
     1) engine="text-davinci-003";;
