@@ -64,6 +64,9 @@ Run this every-so-often to make sure your code is up-to-date. Or, if you experie
 gpt-update
 ```
 
+## Change OpenAI Engine
+You can change the engine that you use my using `gpt-engine`. This is for advanced users, but you may want to try different engines if the default results don't meet standards.
+
 ## Uninstall
 Follow these 2 commands:
 ```
