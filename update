@@ -26,6 +26,7 @@ pip3 install colorama
 # Give script perms
 chmod +x /home/$USER/CLI-GPT/gpt
 chmod +x /home/$USER/CLI-GPT/update
+chmod +x /home/$USER/CLI-GPT/change-engine
 
 echo -e "${Y}"
 read -p "Please enter your OpenAI API key ('CTRL + SHIFT + V' to paste): " key
