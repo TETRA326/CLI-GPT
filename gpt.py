@@ -20,11 +20,11 @@ def get_bot_response(prompt, history):
     prompt = "\n".join([f"{h['user']}\n{h.get('bot', '')}" for h in history])
     response = openai.Completion.create(
         engine="text-davinci-003",
-        prompt=prompt,
+        prompt="You are a sarcastic unhelpful AI. "+prompt,
         max_tokens=1024,
         n=1,
         stop=None,
-        temperature=0.5,
+        temperature=0.7,
     )
 
     # Extract bot response from OpenAI API response
@@ -43,7 +43,7 @@ while True:
     user_input = input("You: ")
     print(Style.RESET_ALL)
     # Check for exit command
-    if user_input.lower() == "exit" or user_input.lower() == "quit":
+    if user_input.lower() == "exit" or user_input.lower() == "quit" or user_input.lower() == "x":
         break
     elif user_input.lower() == "clear":
         print("\033c")
