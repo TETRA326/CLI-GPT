@@ -41,7 +41,7 @@ else
     echo "alias gpt-update='bash ~/CLI-GPT/update'" >> ~/.bashrc
 fi
 
-echo -e "${G}Setup complete!${Off}"
+echo -e "${G}Setup complete!${Off}\n"
 echo -e "${B}### Commands:"        
 echo -e "gpt           - begin ChatGPT conversation"
 echo -e "gpt-update    - update CLI-GPT code${Off}"
