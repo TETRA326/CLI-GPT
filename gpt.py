@@ -6,6 +6,7 @@ from colorama import Fore, Back, Style
 print(Fore.BLUE + "Commands:")
 print("exit  [quit, x, q]    - quit conversation")
 print("clear                 - clear the screen")
+print("log   [history, l]    - shows the previous messages in the conversation"  + Style.RESET_ALL)
 print(Fore.CYAN + "Hint: You can copy using 'CTRL + SHIFT + C' and paste using 'CTRL + SHIFT + V'" + Style.RESET_ALL)
 
 # Set up OpenAI API key
@@ -51,6 +52,9 @@ while True:
     elif user_input.lower() == "clear":
         print("\033c")
         history.append({"user": user_input})
+    elif user_input.lower() == "log" or user_input.lower() == "history":
+        for x in range(len(history)):
+            print(history[x])
     else:
         # Get bot response
         bot_response = get_bot_response(user_input, history)
