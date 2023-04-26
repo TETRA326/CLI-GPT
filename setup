@@ -29,14 +29,20 @@ echo -e "${Off}"
 # Replace the API key in gpt.py
 sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" ~/CLI-GPT/gpt.py
 
-echo -e "${G}API key successfully updated in gpt.py${Off}"
+echo -e "${G}API key successfully updated in 'gpt.py'${Off}"
 
-echo -e "${Cyan}Adding 'gpt' and 'gpt-update' aliases...${Off}"
-echo "alias gpt='python3 ~/CLI-GPT/gpt.py'" >> ~/.bashrc
-echo "alias gpt-update='bash ~/CLI-GPT/update'" >> ~/.bashrc
+# checks if the aliases are already present
+alias_check='$(alias -p | grep -om 1 "python3 ~/CLI-GPT/gpt.py")'
+if [ "$alias_check" == "python3 ~/CLI-GPT/gpt.py" ]; then
+    echo -e "${Y}Aliases are already set!${Off}"
+else
+    echo -e "${Cyan}Adding 'gpt' and 'gpt-update' aliases...${Off}"
+    echo "alias gpt='python3 ~/CLI-GPT/gpt.py'" >> ~/.bashrc
+    echo "alias gpt-update='bash ~/CLI-GPT/update'" >> ~/.bashrc
+fi
 
 echo -e "${G}Setup complete!${Off}"
-echo -e "${P}### Commands:"        
+echo -e "${B}### Commands:"        
 echo -e "gpt           - begin ChatGPT conversation"
 echo -e "gpt-update    - update CLI-GPT code${Off}"
 cd ~
