@@ -38,13 +38,13 @@ When that is finished, run these commands:
 ```
 cd CLI-GPT
 chmod +x ./setup
-```-->
+```
 
 ### 5. Run ./setup and insert API Key
 Run this command:
 ```
 ./setup
-```
+```-->
 When prompted, paste your OpenAI Secret Key. REMEMBER! Use `CTRL + SHIFT + V` to paste in the terminal.
 Press enter to continue.
 
