@@ -47,7 +47,7 @@ chmod +x /home/$USER/CLI-GPT/update
 chmod +x /home/$USER/CLI-GPT/change-engine
 chmod +x /home/$USER/CLI-GPT/tone
 
-echo -e "${G}API Key found in 'gpt.py'! ${Black}${On_White}($current_key)${Off}${Cyan}"
+echo -e "\n${G}API Key found in 'gpt.py'! ${Black}${On_White}($current_key)${Off}${Y}"
 read -p "Do you want to change your OpenAI API key? (y/N): " update_key
 
 if [ "$update_key" == "y" ] || [ "$update_key" == "Y" ]; then
@@ -62,7 +62,7 @@ else
     echo -e "${Cyan}API Key kept!${Y}"
 fi
 
-echo -e "Please understand '~/.bash_aliases' will be overwritten! This is recommended for most users. "
+echo -e "\nPlease understand '~/.bash_aliases' will be overwritten! This is recommended for most users. "
 read -p "Do wish to continue? (Y/n): " overwrite_aliases
 
 if [ "$overwrite_aliases" == "n" ] || [ "$overwrite_aliases" == "N" ]; then
