@@ -6,8 +6,7 @@ source ~/CLI-GPT/extras/colors
 echo -e "\n${Cyan}Welcome to the first time setup for CLI-GPT!${Off}\n"
 
 # Install required packages
-# sudo apt-get update
-# sudo apt-get install python3-pip -y
+# sudo apt install python3-pip -y
 pip3 install openai
 pip3 install colorama
 
