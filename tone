@@ -34,32 +34,32 @@ echo "21. Sympathetic"
 echo "22. Tentative"
 echo -e "23. Warm ${Off} \n"
 
-read -p "Enter a number: " choice
+read -p "Enter a number: " tone_choice
 
-case $choice in
-    1) tone="";;
-    2) tone="Answer my question in an authoritative tone.";;
-    3) tone="Answer my question in a clinical tone.";;
-    4) tone="Answer my question in a concise tone.";;
-    5) tone="Answer my question in a cold tone.";;
-    6) tone="Answer my question in a confident tone.";;
-    7) tone="Answer my question in a cynical tone.";;
-    8) tone="Answer my question in an emotional tone.";;
-    9) tone="Answer my question in an empathetic tone.";;
-    10) tone="Answer my question very formally.";;
-    11) tone="Answer my question in a very friendly tone.";;
-    12) tone="Answer my question humorously.";;
-    13) tone="Answer my question in an informal tone.";;
-    14) tone="Answer my question in an ironic way.";;
-    15) tone="Answer my question as an extreme optimist.";;
-    16) tone="Answer my question in an extreme pessimist.";;
-    17) tone="Answer my question in a very persuasive tone.";;
-    18) tone="Answer my question in a playful tone.";;
-    19) tone="Answer my question sarcastically.";;
-    20) tone="Answer my question in a very serious tone.";;
-    21) tone="Answer my question sympathetically.";;
-    22) tone="Answer my question in a tentative tone.";;
-    23) tone="Answer my question in a very warm tone.";;
+case $tone_choice in
+    1) tone=""; tone_desc="Default";;
+    2) tone="Answer my question in an authoritative tone."; tone_desc="Authoritative";;
+    3) tone="Answer my question in a clinical tone."; tone_desc="Clinical";;
+    4) tone="Answer my question in a concise tone."; tone_desc="Concise";;
+    5) tone="Answer my question in a cold tone."; tone_desc="Cold";;
+    6) tone="Answer my question in a confident tone."; tone_desc="Confident";;
+    7) tone="Answer my question in a cynical tone."; tone_desc="Cynical";;
+    8) tone="Answer my question in an emotional tone."; tone_desc="Emotional";;
+    9) tone="Answer my question in an empathetic tone."; tone_desc="Empathetic";;
+    10) tone="Answer my question very formally." tone_desc="Formal";;
+    11) tone="Answer my question in a very friendly tone."; tone_desc="Friendly";;
+    12) tone="Answer my question humorously."; tone_desc="Humorous";;
+    13) tone="Answer my question in an informal tone."; tone_desc="Informal";;
+    14) tone="Answer my question in an ironic way."; tone_desc="Ironic";;
+    15) tone="Answer my question as an extreme optimist."; tone_desc="Optimistic";;
+    16) tone="Answer my question in an extreme pessimist."; tone_desc="Pessimistic";;
+    17) tone="Answer my question in a very persuasive tone."; tone_desc="Persuasive";;
+    18) tone="Answer my question in a playful tone."; tone_desc="Playful";;
+    19) tone="Answer my question sarcastically."; tone_desc="Sarcastic";;
+    20) tone="Answer my question in a very serious tone."; tone_desc="Serious";;
+    21) tone="Answer my question sympathetically."; tone_desc="Sympathetic";;
+    22) tone="Answer my question in a tentative tone."; tone_desc="Tentative";;
+    23) tone="Answer my question in a very warm tone."; tone_desc="Warm";;
     *) echo "Invalid choice"; exit 1;;
 esac
 
@@ -84,28 +84,28 @@ echo "17. Poetic"
 echo "18. Satirical"
 echo -e "19. Technical ${Off} \n"
 
-read -p "Enter a number: " choice
+read -p "Enter a number: " style_choice
 
-case $choice in
-    1) writingstyle="";;
-    2) writingstyle="Write in an academic stlye.";;
-    3) writingstyle="Write in an analytical stlye.";;
-    4) writingstyle="Write in an argumentative stlye.";;
-    5) writingstyle="Write in a conversational style.";;
-    6) writingstyle="Write in a very creative stlye.";;
-    7) writingstyle="Write in a descriptive stlye.";;
-    8) writingstyle="Write in an epigrammatic stlye.";;
-    9) writingstyle="Write in an epistolary stlye.";;
-    10) writingstyle="Write in an expository stlye.";;
-    11) writingstyle="Write in an informative stlye.";;
-    12) writingstyle="Write in an instructive stlye.";;
-    13) writingstyle="Write in a journalistic stlye.";;
-    14) writingstyle="Write in a metaphorical stlye.";;
-    15) writingstyle="Write in a narrative stlye.";;
-    16) writingstyle="Write in a persuasive stlye.";;
-    17) writingstlye="Write in a poetic stlye.";;
-    18) writingstyle="Write in a satirical stlye.";;
-    19) writingstyle="Write in a technical stlye.";;
+case $style_choice in
+    1) writingstyle=""; style_desc="Default";;
+    2) writingstyle="Write in an academic stlye."; style_desc="Academic";;
+    3) writingstyle="Write in an analytical stlye."; style_desc="Analytical";;
+    4) writingstyle="Write in an argumentative stlye."; style_desc="Argumentative";;
+    5) writingstyle="Write in a conversational style."; style_desc="Conversational";;
+    6) writingstyle="Write in a very creative stlye."; style_desc="Creative";;
+    7) writingstyle="Write in a descriptive stlye."; style_desc="Descriptive";;
+    8) writingstyle="Write in an epigrammatic stlye."; style_desc="Epigrammatic";;
+    9) writingstyle="Write in an epistolary stlye."; style_desc="Epistolary";;
+    10) writingstyle="Write in an expository stlye."; style_desc="Expository";;
+    11) writingstyle="Write in an informative stlye."; style_desc="Informative";;
+    12) writingstyle="Write in an instructive stlye."; style_desc="Instructive";;
+    13) writingstyle="Write in a journalistic stlye."; style_desc="Journalistic";;
+    14) writingstyle="Write in a metaphorical stlye."; style_desc="Metaphorical";;
+    15) writingstyle="Write in a narrative stlye."; style_desc="Narrative";;
+    16) writingstyle="Write in a persuasive stlye."; style_desc="Persuasive";;
+    17) writingstlye="Write in a poetic stlye."; style_desc="Poetic";;
+    18) writingstyle="Write in a satirical stlye."; style_desc="Satirical";;
+    19) writingstyle="Write in a technical stlye."; style_desc="Technical";;
     *) echo "Invalid choice"; exit 1;;
 esac
 
@@ -114,4 +114,4 @@ esac
 sed -i "s/tone=\".*\"/tone=\"$tone\"/" ~/CLI-GPT/gpt.py
 sed -i "s/writingstyle=\".*\"/writingstyle=\"$writingstyle\"/" ~/CLI-GPT/gpt.py
 
-echo -e "${G}Tone and writing style successfully updated to tone and writing_style in 'gpt.py'${Off}"
+echo -e "${G}Update tone to '$tone_desc' and style to '$style_desc' in 'gpt.py'${Off}"
