@@ -18,7 +18,7 @@ DO NOT GIVE YOUR KEY TO ANYONE.
 Go to https://shell.cloud.google.com/
 Let the terminal at the bottom load.
 
-In the terminal, you should see something like: `account@cloudshell:~/`
+In the terminal, you should see something like: `account@cloudshell:~$`
 
 *Tip:*
 You can un-check the 'Editor' button to full-screen the Terminal:
