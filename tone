@@ -87,31 +87,31 @@ echo -e "19. Technical ${Off} \n"
 read -p "Enter a number: " choice
 
 case $choice in
-    1) writing_style="";;
-    2) writing_style="Write in an academic stlye.";;
-    3) writing_style="Write in an analytical stlye.";;
-    4) writing_style="Write in an argumentative stlye.";;
-    5) writing_style="Write in a conversational style.";;
-    6) writing_style="Write in a very creative stlye.";;
-    7) writing_style="Write in a descriptive stlye.";;
-    8) writing_style="Write in an epigrammatic stlye.";;
-    9) writing_style="Write in an epistolary stlye.";;
-    10) writing_style="Write in an expository stlye.";;
-    11) writing_style="Write in an informative stlye.";;
-    12) writing_style="Write in an instructive stlye.";;
-    13) writing_style="Write in a journalistic stlye.";;
-    14) writing_style="Write in a metaphorical stlye.";;
-    15) writing_style="Write in a narrative stlye.";;
-    16) writing_style="Write in a persuasive stlye.";;
-    17) writing_stlye="Write in a poetic stlye.";;
-    18) writing_style="Write in a satirical stlye.";;
-    19) writing_style="Write in a technical stlye.";;
+    1) writingstyle="";;
+    2) writingstyle="Write in an academic stlye.";;
+    3) writingstyle="Write in an analytical stlye.";;
+    4) writingstyle="Write in an argumentative stlye.";;
+    5) writingstyle="Write in a conversational style.";;
+    6) writingstyle="Write in a very creative stlye.";;
+    7) writingstyle="Write in a descriptive stlye.";;
+    8) writingstyle="Write in an epigrammatic stlye.";;
+    9) writingstyle="Write in an epistolary stlye.";;
+    10) writingstyle="Write in an expository stlye.";;
+    11) writingstyle="Write in an informative stlye.";;
+    12) writingstyle="Write in an instructive stlye.";;
+    13) writingstyle="Write in a journalistic stlye.";;
+    14) writingstyle="Write in a metaphorical stlye.";;
+    15) writingstyle="Write in a narrative stlye.";;
+    16) writingstyle="Write in a persuasive stlye.";;
+    17) writingstlye="Write in a poetic stlye.";;
+    18) writingstyle="Write in a satirical stlye.";;
+    19) writingstyle="Write in a technical stlye.";;
     *) echo "Invalid choice"; exit 1;;
 esac
 
 
 # Update gpt.py with the chosen tone and writing style
 sed -i "s/tone=\".*\"/tone=\"$tone\"/" ~/CLI-GPT/gpt.py
-sed -i "s/writing_stlye=\".*\"/writing_style=\"$writing_style\"/" ~/CLI-GPT/gpt.py
+sed -i "s/writingstlye=\".*\"/writingstyle=\"$writingstyle\"/" ~/CLI-GPT/gpt.py
 
 echo -e "${G}Tone and writing style successfully updated to tone and writing_style in 'gpt.py'${Off}"
