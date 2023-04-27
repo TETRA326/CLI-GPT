@@ -37,4 +37,4 @@ On_Cyan='\033[46m'        # Cyan
 On_White='\033[47m'       # White
 # Run gpt.py
 echo -e "${BGreen}${On_Purple}${URed}"
-python3 ~/CLI-GPT/gpt.py | lolcat
+python3 ~/CLI-GPT/gpt.py
