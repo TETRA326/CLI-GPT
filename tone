@@ -104,7 +104,7 @@ echo "19. Technical"
 echo "20. Yoda"
 echo "21. Shakespeare"
 echo -e "22. Amongus ${Off}"
-echo -e "${BRed} 23. DEVELOPER MODE ${Off} \n"
+echo -e "${BRed}23. DEVELOPER MODE ${Off} \n"
 
 read -p "Enter a number: " style_choice
 
