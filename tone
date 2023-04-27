@@ -132,4 +132,4 @@ esac
 sed -i "s/tone=\".*\"/tone=\"$tone\"/" ~/CLI-GPT/gpt.py
 sed -i "s/writingstyle=\".*\"/writingstyle=\"$writingstyle\"/" ~/CLI-GPT/gpt.py
 
-echo -e "${G}Update tone to ${On_White}'$tone_desc'${Off}${G} and style to ${On_White}'$style_desc'${Off}${G} in 'gpt.py'${Off}"
+echo -e "${G}Update tone to ${On_White}${Black}$tone_desc${Off}${G} and style to ${On_White}${Black}$style_desc${Off}${G} in 'gpt.py'${Off}"
