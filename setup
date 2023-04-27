@@ -40,7 +40,7 @@ chmod +x /home/$USER/CLI-GPT/gpt
 chmod +x /home/$USER/CLI-GPT/update
 chmod +x /home/$USER/CLI-GPT/change-engine
 chmod +x /home/$USER/CLI-GPT/tone
-chmod +x /home/$USER/CLI-GPT/extras/default
+chmod +x /home/$USER/CLI-GPT/extras/defaults
 
 echo -e "${Y}"
 read -p "Please enter your OpenAI API key ('CTRL + SHIFT + V' to paste): " key
