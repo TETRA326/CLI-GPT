@@ -101,7 +101,9 @@ echo "16. Persuasive"
 echo "17. Poetic"
 echo "18. Satirical"
 echo "19. Technical"
-echo -e "20. Amongus ${Off} \n"
+echo "20. Yoda"
+echo "21. Shakespeare"
+echo -e "22. Amongus ${Off} \n"
 
 read -p "Enter a number: " style_choice
 
@@ -125,7 +127,9 @@ case $style_choice in
     17) writingstlye="Write in a poetic stlye."; style_desc="Poetic";;
     18) writingstyle="Write in a satirical stlye."; style_desc="Satirical";;
     19) writingstyle="Write in a technical stlye."; style_desc="Technical";;
-    20) writingstyle="Answer every question with the words 'amongus' 'sus'."; style_desc="amongus";;
+    20) writingstyle="Answer my questions as if you were Yoda."; style_desc="Yoda";;
+    21) writingstyle="Answer my questions as if you were Shakespeare."; style_desc="Shakespeare";;
+    22) writingstyle="Answer every question with the words 'amongus' 'sus'."; style_desc="amongus";;
     *) echo "Invalid choice"; exit 1;;
 esac
 
