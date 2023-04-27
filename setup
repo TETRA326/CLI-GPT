@@ -12,7 +12,6 @@ pip3 install openai
 pip3 install colorama
 
 # Give script perms
-#chmod +x /home/$USER/CLI-GPT/gpt
 chmod +x /home/$USER/CLI-GPT/update
 chmod +x /home/$USER/CLI-GPT/change-engine
 chmod +x /home/$USER/CLI-GPT/tone
