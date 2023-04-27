@@ -9,25 +9,109 @@ B='\033[0;34m'         # Blue
 P='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
 
-echo -e "${B}Choose an option for the OpenAI engine${Off}\n"
-echo -e "${Cyan}1. Davinci 3 (Recommended)"
-echo "2. Davinci 2"
-echo "3. Curie 1"
-echo "4. Babbage 1"
-echo -e "5. ADA 1 ${Y} \n"
+echo -e "${B}Choose an option to change ChatGPT's Tone${Off}\n"
+echo -e "${G}1. Default ${Off}"
+echo -e "${Cyan}2. Authoritative"
+echo "3. Clinical"
+echo "4. Concise"
+echo "5. Cold"
+echo "6. Confident"
+echo "7. Cynical"
+echo "8. Emotional"
+echo "9. Empathetic"
+echo "10. Formal"
+echo "11. Friendly"
+echo "12. Humorous"
+echo "13. Informal"
+echo "14. Ironic"
+echo "15. Optimistic"
+echo "16. Pessimistic"
+echo "17. Persuasive"
+echo "18. Playful"
+echo "19. Sarcastic"
+echo "20. Serious"
+echo "21. Sympathetic"
+echo "22. Tentative"
+echo -e "23. Warm ${Off} \n"
 
 read -p "Enter a number: " choice
 
 case $choice in
-    1) engine="text-davinci-003";;
-    2) engine="text-davinci-002";;
-    3) engine="text-curie-001";;
-    4) engine="text-babbage-001";;
-    5) engine="text-ada-001";;
+    1) tone="";;
+    2) tone="Answer my question in an authoritative tone.";;
+    3) tone="Answer my question in a clinical tone.";;
+    4) tone="Answer my question in a concise tone.";;
+    5) tone="Answer my question in a cold tone.";;
+    6) tone="Answer my question in a confident tone.";;
+    7) tone="Answer my question in a cynical tone.";;
+    8) tone="Answer my question in an emotional tone.";;
+    9) tone="Answer my question in an empathetic tone.";;
+    10) tone="Answer my question very formally.";;
+    11) tone="Answer my question in a very friendly tone.";;
+    12) tone="Answer my question humorously.";;
+    13) tone="Answer my question in an informal tone.";;
+    14) tone="Answer my question in an ironic way.";;
+    15) tone="Answer my question as an extreme optimist.";;
+    16) tone="Answer my question in an extreme pessimist.";;
+    17) tone="Answer my question in a very persuasive tone.";;
+    18) tone="Answer my question in a playful tone.";;
+    19) tone="Answer my question sarcastically.";;
+    20) tone="Answer my question in a very serious tone.";;
+    21) tone="Answer my question sympathetically.";;
+    22) tone="Answer my question in a tentative tone.";;
+    23) tone="Answer my question in a very warm tone.";;
     *) echo "Invalid choice"; exit 1;;
 esac
 
-# Update gpt.py with the chosen engine
-sed -i "s/engine=\".*\"/engine=\"$engine\"/" ~/CLI-GPT/gpt.py
+echo -e "${B}Choose an option to change ChatGPT's Writing Style${Off}\n"
+echo -e "${G}1. Default ${Off}"
+echo -e "${Cyan}2. Academic"
+echo "3. Analytical"
+echo "4. Argumentative"
+echo "5. Conversational"
+echo "6. Creative"
+echo "7. Descriptive"
+echo "8. Epigrammatic"
+echo "9. Epistolary"
+echo "10. Expository"
+echo "11. Informative"
+echo "12. Instructive"
+echo "13. Journalistic"
+echo "14. Metaphorical"
+echo "15. Narrative"
+echo "16. Persuasive"
+echo "17. Poetic"
+echo "18. Satirical"
+echo -e "19. Technical ${Off} \n"
 
-echo -e "${G}Engine successfully updated to $engine in gpt.py${Off}"
+read -p "Enter a number: " choice
+
+case $choice in
+    1) writing_style="";;
+    2) writing_style="Write in an academic stlye.";;
+    3) writing_style="Write in an analytical stlye.";;
+    4) writing_style="Write in an argumentative stlye.";;
+    5) writing_style="Write in a conversational style.";;
+    6) writing_style="Write in a very creative stlye.";;
+    7) writing_style="Write in a descriptive stlye.";;
+    8) writing_style="Write in an epigrammatic stlye.";;
+    9) writing_style="Write in an epistolary stlye.";;
+    10) writing_style="Write in an expository stlye.";;
+    11) writing_style="Write in an informative stlye.";;
+    12) writing_style="Write in an instructive stlye.";;
+    13) writing_style="Write in a journalistic stlye.";;
+    14) writing_style="Write in a metaphorical stlye.";;
+    15) writing_style="Write in a narrative stlye.";;
+    16) writing_style="Write in a persuasive stlye.";;
+    17) writing_stlye="Write in a poetic stlye.";;
+    18) writing_style="Write in a satirical stlye.";;
+    19) writing_style="Write in a technical stlye.";;
+    *) echo "Invalid choice"; exit 1;;
+esac
+
+
+# Update gpt.py with the chosen tone and writing style
+sed -i "s/tone=\".*\"/tone=\"$tone\"/" ~/CLI-GPT/gpt.py
+sed -i "s/writing_stlye=\".*\"/writing_style=\"$writing_style\"/" ~/CLI-GPT/gpt.py
+
+echo -e "${G}Tone and writing style successfully updated to $tone and $writing_style in gpt.py${Off}"
