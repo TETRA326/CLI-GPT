@@ -16,8 +16,8 @@ openai.api_key = ""
 history = []
 
 # Tone and writing style
-tone=""
-writingstyle=""
+tone=" "
+writingstyle=" "
 
 # Define function to retrieve bot response
 def get_bot_response(prompt, history):
