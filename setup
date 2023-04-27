@@ -57,7 +57,7 @@ read -p "Do wish to continue? (Y/n): " overwrite_aliases
 if [ "$overwrite_aliases" == "n" ] || [ "$overwrite_aliases" == "N" ]; then
     echo -e "${R}NOTICE: setup will continue, but will have to execute commands manually (bash ~/CLI-GPT/gpt)!${Off}"
 else
-    echo -e "alias gpt='python3 ~/CLI-GPT/gpt.py'\nalias gpt-update='bash ~/CLI-GPT/update'\nalias gpt-engine='bash ~/CLI-GPT/change-engine'\nalias gpt-tone='bash ~/CLI-GPT/tone'\nalias gpt-default='bash ~/CLI-GPT/extras/default'" > ~/.bash_aliases
+    echo -e "alias gpt='python3 ~/CLI-GPT/gpt.py'\nalias gpt-update='bash ~/CLI-GPT/update'\nalias gpt-engine='bash ~/CLI-GPT/change-engine'\nalias gpt-tone='bash ~/CLI-GPT/tone'\nalias gpt-default='bash ~/CLI-GPT/extras/defaults'" > ~/.bash_aliases
     echo -e "${G}Aliases added successfully.${Off}"
 fi
 
