@@ -77,6 +77,9 @@ Follow these 2 commands:
 cd ~
 rm -rf CLI-GPT
 ```
-
+And if you chose to overwrite `.bash_aliases`:
+```
+rm ~/.bash_aliases
+```
 ## Support
 Join our public [Discord](https://discord.gg/NCXRYSmx2a) or DM TΞTRΛ#9264 for any help.
