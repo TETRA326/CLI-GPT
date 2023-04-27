@@ -25,7 +25,7 @@ You can un-check the 'Editor' button to full-screen the Terminal:
 
 ![Close-Editor](/images/pencil.png)
 
-### 4. Clone into Github Repo
+### 4. Clone into Github Repo and run Setup
 Copy this command and paste it in the terminal. Press enter:
 ```
 git clone https://github.com/TETRA326/CLI-GPT.git; cd CLI-GPT; chmod +x ./setup; bash setup
@@ -58,7 +58,7 @@ or use this if you are experiencing problems:
 ```
 python3 ~/CLI-GPT/gpt.py
 ```
-This will give you a similar interface to talk to ChatGPT with. You can bookmark the tab to return later. Cloud Shell should recover your session.
+This will give you a similar interface to talk to ChatGPT with. You can bookmark the tab to return later, or drag this: [shell](https://shell.cloud.google.com) to the bookmark bar. Cloud Shell should recover your session.
 
 *Hint:* You can use the `clear` command to remove all the text in the terminal and clear your workspace.
 
