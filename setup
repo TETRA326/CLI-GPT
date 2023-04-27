@@ -23,6 +23,7 @@ pip3 install colorama
 chmod +x /home/$USER/CLI-GPT/gpt
 chmod +x /home/$USER/CLI-GPT/update
 chmod +x /home/$USER/CLI-GPT/change-engine
+chmod +x /home/#USER/CLI_GPT/tone
 
 echo -e "${Y}"
 read -p "Please enter your OpenAI API key ('CTRL + SHIFT + V' to paste): " key
@@ -38,7 +39,7 @@ read -p "Please understand '~/.bash_aliases' will be overwritten! This is recomm
 if [ "$overwrite_aliases" == "n" ] || [ "$overwrite_aliases" == "N" ]; then
     echo -e "${R}NOTICE: setup will continue, but will have to execute commands manually (bash ~/CLI-GPT/gpt)!${Off}"
 else
-    echo -e "alias gpt='python3 ~/CLI-GPT/gpt.py'\nalias gpt-update='bash ~/CLI-GPT/update'\nalias gpt-engine='bash ~/CLI-GPT/change-engine'" > ~/.bash_aliases
+    echo -e "alias gpt='python3 ~/CLI-GPT/gpt.py'\nalias gpt-update='bash ~/CLI-GPT/update'\nalias gpt-engine='bash ~/CLI-GPT/change-engine' gpt-tone=' bash ~/CLI-GPT/tone'" > ~/.bash_aliases
     echo -e "${G}Aliases added successfully.${Off}"
 fi
 
