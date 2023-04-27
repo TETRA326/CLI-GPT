@@ -59,7 +59,7 @@ if [ "$update_key" == "y" ] || [ "$update_key" == "Y" ]; then
     echo -e "${G}API key successfully updated in 'gpt.py'${Y}"
 else
     sed -i "s/openai.api_key = \"\"/openai.api_key = \"$current_key\"/" /home/$USER/CLI-GPT/gpt.py
-    echo -e "${Cyan}API Key kept!"
+    echo -e "${Cyan}API Key kept!${Y}"
 fi
 
 echo -e "Please understand '~/.bash_aliases' will be overwritten! This is recommended for most users. "
