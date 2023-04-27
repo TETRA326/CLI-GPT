@@ -13,9 +13,17 @@ echo -e "\n${Cyan}Welcome to the updater for CLI-GPT!${Off}\n"
 # Clone into Repo
 git clone https://github.com/TETRA326/CLI-GPT.git
 
-# Install required packages
-pip3 install openai
-pip3 install colorama
+# Check for required packages
+if python3 -c "import openai" &> /dev/null; then
+    echo -e "${G}pip3 module 'openai' was found!${Off}"
+else
+    pip3 install openai
+fi
+if python3 -c "import colorama" &> /dev/null; then
+    echo -e "${G}pip3 module 'colorama' was found!${Off}"
+else
+    pip3 install colorama
+fi
 
 # Give script perms
 chmod +x /home/$USER/CLI-GPT/update
