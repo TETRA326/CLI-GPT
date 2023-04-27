@@ -1,8 +1,9 @@
 #!/bin/bash
+source ~/CLI-GPT/extras/colors
 
 # Revert Engine, Tone, and Writing Style to Defaults
 sed -i "s/engine=\".*\"/engine=\"text-davinci-003\"/" ~/CLI-GPT/gpt.py
 sed -i "s/tone=\".*\"/tone=\"\"/" ~/CLI-GPT/gpt.py
 sed -i "s/writingstyle=\".*\"/writingstyle=\"\"/" ~/CLI-GPT/gpt.py
 
-echo "Reverted to defaults successfully!"
+echo -e "${G}Reverted to defaults successfully!${Off}"
