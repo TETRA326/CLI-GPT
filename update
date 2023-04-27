@@ -37,6 +37,16 @@ sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" /home/$USER/CLI-GPT/
 
 echo -e "${G}API key successfully updated in 'gpt.py'${Off}"
 
+
+read -p "Please understand '~/.bash_aliases' will be overwritten! This is recommended for most users. Do wish to continue? (Y/n): " overwrite_aliases
+
+if [ "$overwrite_aliases" == "n" ] || [ "$overwrite_aliases" == "N" ]; then
+    echo -e "${R}NOTICE: setup will continue, but will have to execute commands manually (bash ~/CLI-GPT/gpt)!${Off}"
+else
+    echo -e "alias gpt='python3 ~/CLI-GPT/gpt.py'\nalias gpt-update='bash ~/CLI-GPT/update'\nalias gpt-engine='bash ~/CLI-GPT/change-engine'" > ~/.bash_aliases
+    echo -e "${G}Aliases added successfully.${Off}"
+fi
+
 echo -e "${G}Update complete!${Off}\n"
 echo -e "${B}Commands:"        
 echo -e "gpt           - begin ChatGPT conversation"
