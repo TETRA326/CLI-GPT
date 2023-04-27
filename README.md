@@ -56,7 +56,7 @@ gpt
 ```
 or use this if you are experiencing problems:
 ```
-bash ~/CLI-GPT/gpt
+python3 ~/CLI-GPT/gpt.py
 ```
 This will give you a similar interface to talk to ChatGPT with. You can bookmark the tab to return later. Cloud Shell should recover your session.
 
