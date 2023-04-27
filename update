@@ -46,7 +46,7 @@ chmod +x /home/$USER/CLI-GPT/gpt
 chmod +x /home/$USER/CLI-GPT/update
 chmod +x /home/$USER/CLI-GPT/change-engine
 chmod +x /home/$USER/CLI-GPT/tone
-chmod +x /home/$USER/CLI-GPT/extras/default
+chmod +x /home/$USER/CLI-GPT/extras/defaults
 
 echo -e "\n${G}API Key found in 'gpt.py'! ${Black}${On_White}($current_key)${Off}${Y}"
 read -p "Do you want to change your OpenAI API key? (y/N): " update_key
