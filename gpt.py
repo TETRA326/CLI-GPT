@@ -15,6 +15,10 @@ openai.api_key = ""
 # Initialize history
 history = []
 
+# Tone and writing style
+tone=""
+writing_style=""
+
 # Define function to retrieve bot response
 def get_bot_response(prompt, history):
     # Append user prompt to history
@@ -24,7 +28,7 @@ def get_bot_response(prompt, history):
     prompt = "\n".join([f"{h['user']}\n{h.get('bot', '')}" for h in history])
     response = openai.Completion.create(
         engine="text-davinci-003",
-        prompt=prompt,
+        prompt=tone+writing_stlye+prompt,
         max_tokens=1024,
         n=1,
         stop=None,
