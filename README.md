@@ -73,6 +73,7 @@ You can change the engine that you use by using `gpt-engine`. This is for advanc
 
 ## Change Tone and Writing Style
 Run `gpt-tone` to edit the Tone of voice and the Writing Style of ChatGPT. To reset it to defaults, choose `1` for both options.
+
 *Hint:* Try choosing #23. You can ask it almost anything.
 
 ## Uninstall
