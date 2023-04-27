@@ -125,7 +125,7 @@ case $style_choice in
     17) writingstlye="Write in a poetic stlye."; style_desc="Poetic";;
     18) writingstyle="Write in a satirical stlye."; style_desc="Satirical";;
     19) writingstyle="Write in a technical stlye."; style_desc="Technical";;
-    20) writingstyle="Answer every question with the word 'amongus'."; style_desc="amongus";;
+    20) writingstyle="Answer every question with the words 'amongus' 'sus'."; style_desc="amongus";;
     *) echo "Invalid choice"; exit 1;;
 esac
 
