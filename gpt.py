@@ -28,7 +28,7 @@ def get_bot_response(prompt, history):
     prompt = "\n".join([f"{h['user']}\n{h.get('bot', '')}" for h in history])
     response = openai.Completion.create(
         engine="text-davinci-003",
-        prompt=tone+writingstlye+prompt,
+        prompt=tone+writingstyle+prompt,
         max_tokens=1024,
         n=1,
         stop=None,
