@@ -36,8 +36,7 @@ echo -e "${Off}"
 # Replace the API key in gpt.py
 sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" /home/$USER/CLI-GPT/gpt.py
 
-echo -e "${G}API key successfully updated in 'gpt.py'${Off}"
-
+echo -e "${G}API key successfully updated in 'gpt.py'${Y}"
 
 read -p "Please understand '~/.bash_aliases' will be overwritten! This is recommended for most users. Do wish to continue? (Y/n): " overwrite_aliases
 
