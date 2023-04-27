@@ -45,7 +45,8 @@ echo -e "${B}Commands:"
 echo -e "gpt           - begin ChatGPT conversation"
 echo -e "gpt-update    - update CLI-GPT code"
 echo -e "gpt-tone      - change ChatGPT's tone and writing style"
-echo -e "gpt-engine    - change OpenAI engine${Off}"
+echo -e "gpt-engine    - change OpenAI engine"
+echo -e "gpt-default   - revert engine, tone, and writing style to defaults${Off}"
 
 cd /home/$USER/
 bash
