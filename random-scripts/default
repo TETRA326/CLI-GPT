@@ -1,2 +1,5 @@
 #!/bin/bash
 
+sed -i "s/engine=\".*\"/engine=\"text-davinci-003\"/" ~/CLI-GPT/gpt.py
+sed -i "s/tone=\".*\"/tone=\"\"/" ~/CLI-GPT/gpt.py
+sed -i "s/writing_style=\".*\"/writing_style=\"\"/" ~/CLI-GPT/gpt.py
