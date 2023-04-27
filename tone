@@ -112,6 +112,6 @@ esac
 
 # Update gpt.py with the chosen tone and writing style
 sed -i "s/tone=\".*\"/tone=\"$tone\"/" ~/CLI-GPT/gpt.py
-sed -i "s/writingstlye=\".*\"/writingstyle=\"$writingstyle\"/" ~/CLI-GPT/gpt.py
+sed -i "s/writingstyle=\".*\"/writingstyle=\"$writingstyle\"/" ~/CLI-GPT/gpt.py
 
 echo -e "${G}Tone and writing style successfully updated to tone and writing_style in 'gpt.py'${Off}"
