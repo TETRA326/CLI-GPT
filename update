@@ -27,6 +27,7 @@ On_Purple='\033[45m'      # Purple
 On_Cyan='\033[46m'        # Cyan
 On_White='\033[47m'       # White
 
+current_key=$(grep "openai.api_key" ~/CLI-GPT/gpt.py | awk -F'"' '{print $2}')
 cd /home/$USER/
 rm -rf CLI-GPT/
 
@@ -46,14 +47,20 @@ chmod +x /home/$USER/CLI-GPT/update
 chmod +x /home/$USER/CLI-GPT/change-engine
 chmod +x /home/$USER/CLI-GPT/tone
 
-echo -e "${Y}"
-read -p "Please enter your OpenAI API key ('CTRL + SHIFT + V' to paste): " key
-echo -e "${Off}"
+echo -e "${G}API Key found in 'gpt.py'! ${Black}${On_White}($current_key)${Off}${Cyan}"
+read -p "Do you want to change your OpenAI API key? (y/N): " update_key
 
-# Replace the API key in gpt.py
-sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" /home/$USER/CLI-GPT/gpt.py
-
-echo -e "${G}API key successfully updated in 'gpt.py'${Y}"
+if [ "$update_key" == "y" ] || [ "$update_key" == "Y" ]; then
+    echo -e "${Y}"
+    read -p "Please enter your OpenAI API key ('CTRL + SHIFT + V' to paste): " key
+    echo -e "${Off}"
+    # Replace the API key in gpt.py
+    sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" /home/$USER/CLI-GPT/gpt.py
+    echo -e "${G}API key successfully updated in 'gpt.py'${Y}"
+else
+    sed -i "s/openai.api_key = \"\"/openai.api_key = \"$current_key\"/" /home/$USER/CLI-GPT/gpt.py
+    echo -e "${Cyan}API Key kept!"
+fi
 
 echo -e "Please understand '~/.bash_aliases' will be overwritten! This is recommended for most users. "
 read -p "Do wish to continue? (Y/n): " overwrite_aliases
