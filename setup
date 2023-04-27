@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# Import Colors
 source ~/CLI-GPT/extras/colors
 
 echo -e "\n${Cyan}Welcome to the first time setup for CLI-GPT!${Off}\n"
@@ -16,6 +18,7 @@ chmod +x /home/$USER/CLI-GPT/change-engine
 chmod +x /home/$USER/CLI-GPT/tone
 chmod +x /home/$USER/CLI-GPT/extras/defaults
 
+# Ask for API Key
 echo -e "${Y}"
 read -p "Please enter your OpenAI API key ('CTRL + SHIFT + V' to paste): " key
 echo -e "${Off}"
@@ -25,6 +28,7 @@ sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" /home/$USER/CLI-GPT/
 
 echo -e "${G}API key successfully updated in 'gpt.py'${Y}"
 
+# Ask to overwrite .bash_aliases
 echo -e "Please understand '~/.bash_aliases' will be overwritten! This is recommended for most users. "
 read -p "Do wish to continue? (Y/n): " overwrite_aliases
 
@@ -35,6 +39,7 @@ else
     echo -e "${G}Aliases added successfully.${Off}"
 fi
 
+# List commands
 echo -e "${G}Setup complete!${Off}\n"
 echo -e "${B}Commands:"        
 echo -e "gpt           - begin ChatGPT conversation"
