@@ -68,3 +68,4 @@ echo -e "${BBlue}gpt-default${B}   - revert engine, tone, and writing style to d
 
 cd /home/$USER/
 bash ~/.bash_aliases
+cd /home/$USER/
