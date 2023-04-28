@@ -38,7 +38,7 @@ if [ -f ~/.bash_aliases ]; then
     echo -e "Please understand ${BYellow}'~/.bash_aliases'${Off}${Y} will be overwritten! This is recommended for most users. "
     read -p "Do wish to continue? (Y/n): " overwrite_aliases
     if [ "$overwrite_aliases" == "n" ] || [ "$overwrite_aliases" == "N" ]; then
-        echo -e "${R}NOTICE: setup will continue, but will have to execute commands manually (bash ~/CLI-GPT/gpt)!${Off}"
+        echo -e "${R}NOTICE: setup will continue, but will have to execute commands manually (python3 ~/CLI-GPT/gpt.py)!${Off}"
     else
         echo -e "alias gpt='python3 ~/CLI-GPT/gpt.py'" > ~/.bash_aliases
         echo -e "alias gpt-update='bash ~/CLI-GPT/update'" >> ~/.bash_aliases
