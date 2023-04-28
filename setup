@@ -67,4 +67,4 @@ echo -e "${BBlue}gpt-engine${B}    - change OpenAI engine"
 echo -e "${BBlue}gpt-default${B}   - revert engine, tone, and writing style to defaults${Off}"
 
 cd /home/$USER/
-bash
+bash ~/.bash_aliases
