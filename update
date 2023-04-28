@@ -55,7 +55,7 @@ if [ "$overwrite_aliases" == "n" ] || [ "$overwrite_aliases" == "N" ]; then
     echo -e "${R}NOTICE: update will continue, but new aliases will not be set!${Off}"
 else
     echo -e "alias gpt='python3 ~/CLI-GPT/gpt.py'" > ~/.bash_aliases
-    echo -e "alias gpt-update='bash ~/CLI-GPT/update \&\& source ~/.bash_aliases'" >> ~/.bash_aliases
+    echo -e "alias gpt-update='bash ~/CLI-GPT/update && source ~/.bash_aliases'" >> ~/.bash_aliases
     echo -e "alias gpt-engine='bash ~/CLI-GPT/change-engine'" >> ~/.bash_aliases
     echo -e "alias gpt-tone='bash ~/CLI-GPT/tone'" >> ~/.bash_aliases
     echo -e "alias gpt-default='bash ~/CLI-GPT/extras/defaults'" >> ~/.bash_aliases
