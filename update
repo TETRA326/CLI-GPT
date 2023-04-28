@@ -48,7 +48,7 @@ else
 fi
 
 # Ask to overwrite .bash_aliases
-echo -e "\nPlease understand '~/.bash_aliases' will be overwritten! This is recommended for most users. "
+echo -e "\nPlease understand ${BYellow}'~/.bash_aliases'${Off}${Y} will be overwritten! This is recommended for most users. "
 read -p "Do wish to continue? (Y/n): " overwrite_aliases
 
 if [ "$overwrite_aliases" == "n" ] || [ "$overwrite_aliases" == "N" ]; then
