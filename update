@@ -62,8 +62,9 @@ else
     echo -e "${G}Aliases added successfully.${Off}"
 fi
 
+echo -e "${G}Update complete!${Off}\n"
+
 # List commands
-echo -e "${G}Setup complete!${Off}\n"
 echo -e "${B}Commands:"        
 echo -e "${BBlue}gpt${B}           - begin ChatGPT conversation"
 echo -e "${BBlue}gpt-update${B}    - update CLI-GPT code"
