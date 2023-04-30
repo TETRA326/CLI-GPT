@@ -19,10 +19,10 @@ else
 fi
 
 # Give script perms
-chmod +x /home/$USER/CLI-GPT/update
-chmod +x /home/$USER/CLI-GPT/change-engine
-chmod +x /home/$USER/CLI-GPT/tone
-chmod +x /home/$USER/CLI-GPT/extras/defaults
+chmod +x $HOME/CLI-GPT/update
+chmod +x $HOME/CLI-GPT/change-engine
+chmod +x $HOME/CLI-GPT/tone
+chmod +x $HOME/CLI-GPT/extras/defaults
 
 # Ask for API Key
 echo -e "${Y}"
@@ -30,7 +30,7 @@ read -p "Please enter your OpenAI API key ('CTRL + SHIFT + V' to paste): " key
 echo -e "${Off}"
 
 # Replace the API key in gpt.py
-sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" /home/$USER/CLI-GPT/gpt.py
+sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" ~/CLI-GPT/gpt.py
 
 echo -e "${G}API key successfully updated in ${BGreen}'gpt.py'${Y}"
 
@@ -66,5 +66,5 @@ echo -e "${BBlue}gpt-tone${B}      - change ChatGPT's tone and writing style"
 echo -e "${BBlue}gpt-engine${B}    - change OpenAI engine"
 echo -e "${BBlue}gpt-default${B}   - revert engine, tone, and writing style to defaults${Off}"
 
-cd /home/$USER/
+cd $HOME
 exec bash
