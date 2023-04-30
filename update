@@ -5,7 +5,7 @@ source ~/CLI-GPT/extras/colors
 
 # Grab current API key from gpt.py
 current_key=$(grep "openai.api_key" ~/CLI-GPT/gpt.py | awk -F'"' '{print $2}')
-cd /home/$USER/
+cd $HOME
 rm -rf CLI-GPT/
 
 echo -e "\n${Cyan}Welcome to the updater for CLI-GPT!${Off}\n"
@@ -26,10 +26,10 @@ else
 fi
 
 # Give script perms
-chmod +x /home/$USER/CLI-GPT/update
-chmod +x /home/$USER/CLI-GPT/change-engine
-chmod +x /home/$USER/CLI-GPT/tone
-chmod +x /home/$USER/CLI-GPT/extras/defaults
+chmod +x $HOME/CLI-GPT/update
+chmod +x $HOME/CLI-GPT/change-engine
+chmod +x $HOME/CLI-GPT/tone
+chmod +x $HOME/CLI-GPT/extras/defaults
 
 # Ask to change key
 echo -e "\n${G}API Key found in 'gpt.py'! ${Black}${On_White}($current_key)${Off}${Y}"
@@ -40,10 +40,10 @@ if [ "$update_key" == "y" ] || [ "$update_key" == "Y" ]; then
     read -p "Please enter your OpenAI API key ('CTRL + SHIFT + V' to paste): " key
     echo -e "${Off}"
     # Replace the API key in gpt.py
-    sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" /home/$USER/CLI-GPT/gpt.py
+    sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" ~/CLI-GPT/gpt.py
     echo -e "${G}API key successfully updated in 'gpt.py'${Y}"
 else
-    sed -i "s/openai.api_key = \"\"/openai.api_key = \"$current_key\"/" /home/$USER/CLI-GPT/gpt.py
+    sed -i "s/openai.api_key = \"\"/openai.api_key = \"$current_key\"/" ~/CLI-GPT/gpt.py
     echo -e "${Cyan}API Key kept!${Y}"
 fi
 
