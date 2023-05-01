@@ -3,6 +3,28 @@ import openai
 import os
 import colorama
 from colorama import Fore, Back, Style
+import requests
+
+def get_latest_commit_hash():
+    url = f"https://api.github.com/repos/TETRA326/CLI-GPT/commits/main"
+    response = requests.get(url)
+    exit()
+    latest_commit_hash = response.json()["sha"]
+    return latest_commit_hash
+
+def check_for_updates():
+    latest_commit_hash = get_latest_commit_hash()
+    current_commit_hash = os.popen('git rev-parse HEAD').read().strip()
+    if latest_commit_hash != current_commit_hash:
+        print(Fore.RED + "NOTICE! An update is available. Run gpt-update to get the latest features.")
+
+check_for_updates()
+print(Fore.BLUE + "Commands:")
+print(Style.BRIGHT + "exit" + Style.NORMAL + "  [quit, x, q]    - quit conversation")
+print(Style.BRIGHT + "clear" + Style.NORMAL + "                 - clear the screen")
+print(Style.BRIGHT + "log" + Style.NORMAL + "   [history]       - shows the previous messages in the conversation"  + Style.RESET_ALL)
+print(Fore.CYAN + "Hint: You can copy using 'CTRL + SHIFT + C' and paste using 'CTRL + SHIFT + V'" + Style.RESET_ALL)
+
 
 print(Fore.BLUE + "Commands:")
 print(Style.BRIGHT + "exit" + Style.NORMAL + "  [quit, x, q]    - quit conversation")
