@@ -5,8 +5,11 @@ import colorama
 from colorama import Fore, Back, Style
 import requests
 
+CLI_GPT_DIRECTORY = os.path.expanduser("~/CLI-GPT")
+
+
 def is_git_repository():
-    return os.path.exists(".git")
+    return os.path.exists(os.path.join(CLI_GPT_DIRECTORY, ".git"))
 
 
 def get_latest_commit_hash():
@@ -22,7 +25,7 @@ def check_for_updates():
         return
 
     latest_commit_hash = get_latest_commit_hash()
-    current_commit_hash = os.popen('git rev-parse HEAD').read().strip()
+    current_commit_hash = os.popen(f'cd {CLI_GPT_DIRECTORY} && git rev-parse HEAD').read().strip()
     if latest_commit_hash != current_commit_hash:
         print(Fore.RED + "NOTICE! An update is available. Run gpt-update to get the latest features.")
 
