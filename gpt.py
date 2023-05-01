@@ -5,18 +5,24 @@ import colorama
 from colorama import Fore, Back, Style
 import requests
 
+def is_git_repository():
+    return os.path.exists(".git")
+
+
 def get_latest_commit_hash():
     url = f"https://api.github.com/repos/TETRA326/CLI-GPT/commits/main"
     response = requests.get(url)
     latest_commit_hash = response.json()["sha"]
     return latest_commit_hash
 
+
 def check_for_updates():
+    if not is_git_repository():
+        print(Fore.YELLOW + "WARNING! This is not a Git repository." + Style.RESET_ALL)
+        return
+
     latest_commit_hash = get_latest_commit_hash()
-    current_commit_hash = None
-    if os.path.exists('.version'):
-        with open('.version', 'r') as f:
-            current_commit_hash = f.read().strip()
+    current_commit_hash = os.popen('git rev-parse HEAD').read().strip()
     if latest_commit_hash != current_commit_hash:
         print(Fore.RED + "NOTICE! An update is available. Run gpt-update to get the latest features.")
 
