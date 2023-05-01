@@ -8,7 +8,6 @@ import requests
 def get_latest_commit_hash():
     url = f"https://api.github.com/repos/TETRA326/CLI-GPT/commits/main"
     response = requests.get(url)
-    exit()
     latest_commit_hash = response.json()["sha"]
     return latest_commit_hash
 
