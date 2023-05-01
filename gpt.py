@@ -13,7 +13,10 @@ def get_latest_commit_hash():
 
 def check_for_updates():
     latest_commit_hash = get_latest_commit_hash()
-    current_commit_hash = os.popen('git rev-parse HEAD').read().strip()
+    current_commit_hash = None
+    if os.path.exists('.version'):
+        with open('.version', 'r') as f:
+            current_commit_hash = f.read().strip()
     if latest_commit_hash != current_commit_hash:
         print(Fore.RED + "NOTICE! An update is available. Run gpt-update to get the latest features.")
 
