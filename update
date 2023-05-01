@@ -24,6 +24,11 @@ if python3 -c "import colorama" &> /dev/null; then
 else
     pip3 install colorama
 fi
+if python3 -c "import requests" &> /dev/null; then
+    echo -e "${G}pip3 module 'requests' was found!${Off}"
+else
+    pip3 install requests
+fi
 
 # Give script perms
 chmod +x $HOME/CLI-GPT/update
