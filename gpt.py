@@ -4,7 +4,7 @@ import os
 import colorama
 from colorama import Fore, Back, Style
 import requests
-
+#ok
 CLI_GPT_DIRECTORY = os.path.expanduser("~/CLI-GPT")
 
 
