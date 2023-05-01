@@ -21,13 +21,13 @@ def get_latest_commit_hash():
 
 def check_for_updates():
     if not is_git_repository():
-        print(Fore.YELLOW + "WARNING! This is not a Git repository." + Style.RESET_ALL)
+        print(Fore.YELLOW + "WARNING: something went wrong (git repo not found)" + Style.RESET_ALL)
         return
 
     latest_commit_hash = get_latest_commit_hash()
     current_commit_hash = os.popen(f'cd {CLI_GPT_DIRECTORY} && git rev-parse HEAD').read().strip()
     if latest_commit_hash != current_commit_hash:
-        print(Fore.RED + "NOTICE! An update is available. Run gpt-update to get the latest features.")
+        print(Fore.RED + Style.BRIGHT + "NOTICE:" + Style.NORMAL + "An update is available. Run gpt-update to get the latest features." + Style.RESET_ALL)
 
 check_for_updates()
 print(Fore.BLUE + "Commands:")
