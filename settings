@@ -141,6 +141,7 @@ case $tone_choice in
 esac
 sed -i "s/tone=\".*\"/tone=\"$tone\"/" ~/CLI-GPT/gpt.py
 echo -e "${G}Updated tone to ${Black}${On_White}$tone_desc${Off}${G} in 'gpt.py'${Off}"
+clear
 update_options
 print_options
         ;;
@@ -218,8 +219,33 @@ case $style_choice in
 esac
 sed -i "s/writingstyle=\".*\"/writingstyle=\"$writingstyle\"/" ~/CLI-GPT/gpt.py
 echo -e "${G}Updated style to ${Black}${On_White}$style_desc${Off}${G} in 'gpt.py'${Off}"
+clear
 update_options
 print_options
+        ;;
+    6)
+        echo -e "${B}Choose an option for the OpenAI engine${Off}\n"
+echo -e "${Cyan}1. Davinci 3 (Recommended)"
+echo "2. Davinci 2"
+echo "3. Curie 1"
+echo "4. Babbage 1"
+echo -e "5. ADA 1 ${Y} \n"
+
+read -p "Enter a number: " choice
+
+case $choice in
+    1) engine="text-davinci-003";;
+    2) engine="text-davinci-002";;
+    3) engine="text-curie-001";;
+    4) engine="text-babbage-001";;
+    5) engine="text-ada-001";;
+    *) echo "Invalid choice"; exit 1;;
+esac
+
+# Update gpt.py with the chosen engine
+sed -i "s/engine=\".*\"/engine=\"$engine\"/" ~/CLI-GPT/gpt.py
+
+echo -e "${G}Engine successfully updated to $engine in gpt.py${Off}"
         ;;
     *)
         clear
