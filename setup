@@ -63,7 +63,7 @@ if [ -f ~/.bash_aliases ]; then
         add_aliases
     fi
 else
-    sed -i "s/ALWAYS_OVERWRITE_ALIASES=false/ALWAYS_OVERWRITE_ALIASES=true/" ~/.config/gpt.conf
+    sed -i "s/ALWAYS_OVERWRITE_ALIASES=false/ALWAYS_OVERWRITE_ALIASES=true/" ~/.config/cli-gpt.conf
     add_aliases
 fi
 
