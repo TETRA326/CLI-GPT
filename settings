@@ -31,6 +31,7 @@ echo -e "\n${G}CLI-GPT settings:${Cyan}\n"
 echo -e "1. Always overwrite '~/.bash_aliases'    ${B}$aliases_set${Cyan}"
 echo -e "2. Always keep API key                   ${B}$keep_key${Cyan}"
 echo -e "3. Turn off update notification          ${B}$noti \n${Y}"
+echo -e "4. Change ChatGPT's tone                     "
 read -p "Enter an option (exit to leave): " select
 }
 
@@ -82,6 +83,63 @@ case $select in
             update_options
             print_options
         fi
+        ;;
+     4)
+        echo -e "${B}Choose an option to change ChatGPT's Tone${Off}\n"
+echo -e "${G}1. Default ${Off}"
+echo -e "${Cyan}2. Authoritative"
+echo "3. Clinical"
+echo "4. Concise"
+echo "5. Cold"
+echo "6. Confident"
+echo "7. Cynical"
+echo "8. Emotional"
+echo "9. Empathetic"
+echo "10. Formal"
+echo "11. Friendly"
+echo "12. Humorous"
+echo "13. Informal"
+echo "14. Ironic"
+echo "15. Optimistic"
+echo "16. Pessimistic"
+echo "17. Persuasive"
+echo "18. Playful"
+echo "19. Sarcastic"
+echo "20. Serious"
+echo "21. Sympathetic"
+echo "22. Tentative"
+echo -e "23. Warm ${Off} \n"
+
+read -p "Enter a number: " tone_choice
+
+case $tone_choice in
+    1) tone=""; tone_desc="Default";;
+    2) tone="Answer my question in an authoritative tone."; tone_desc="Authoritative";;
+    3) tone="Answer my question in a clinical tone."; tone_desc="Clinical";;
+    4) tone="Answer my question in a concise tone."; tone_desc="Concise";;
+    5) tone="Answer my question in a cold tone."; tone_desc="Cold";;
+    6) tone="Answer my question in a confident tone."; tone_desc="Confident";;
+    7) tone="Answer my question in a cynical tone."; tone_desc="Cynical";;
+    8) tone="Answer my question in an emotional tone."; tone_desc="Emotional";;
+    9) tone="Answer my question in an empathetic tone."; tone_desc="Empathetic";;
+    10) tone="Answer my question very formally." tone_desc="Formal";;
+    11) tone="Answer my question in a very friendly tone."; tone_desc="Friendly";;
+    12) tone="Answer my question humorously."; tone_desc="Humorous";;
+    13) tone="Answer my question in an informal tone."; tone_desc="Informal";;
+    14) tone="Answer my question in an ironic way."; tone_desc="Ironic";;
+    15) tone="Answer my question as an extreme optimist."; tone_desc="Optimistic";;
+    16) tone="Answer my question in an extreme pessimist."; tone_desc="Pessimistic";;
+    17) tone="Answer my question in a very persuasive tone."; tone_desc="Persuasive";;
+    18) tone="Answer my question in a playful tone."; tone_desc="Playful";;
+    19) tone="Answer my question sarcastically."; tone_desc="Sarcastic";;
+    20) tone="Answer my question in a very serious tone."; tone_desc="Serious";;
+    21) tone="Answer my question sympathetically."; tone_desc="Sympathetic";;
+    22) tone="Answer my question in a tentative tone."; tone_desc="Tentative";;
+    23) tone="Answer my question in a very warm tone."; tone_desc="Warm";;
+    *) echo "Invalid choice"; exit 1;;
+esac
+sed -i "s/tone=\".*\"/tone=\"$tone\"/" ~/CLI-GPT/gpt.py
+echo -e "${G}Updated tone to ${Black}${On_White}$tone_desc${Off}${G} in 'gpt.py'${Off}"
         ;;
      exit|x|q|quit)
         exit
