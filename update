@@ -2,7 +2,8 @@
 
 # Import colors
 source ~/CLI-GPT/extras/colors
-#source ~/CLI-GPT/extras/config
+# Import config
+source ~/CLI-GPT/extras/config
 
 # Grab current API key from gpt.py
 current_key=$(grep "openai.api_key" ~/CLI-GPT/gpt.py | awk -F'"' '{print $2}')
