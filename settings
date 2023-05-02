@@ -30,9 +30,10 @@ print_options () {
 echo -e "\n${G}CLI-GPT settings:${Cyan}\n"
 echo -e "1. Always overwrite '~/.bash_aliases'    ${B}$aliases_set${Cyan}"
 echo -e "2. Always keep API key                   ${B}$keep_key${Cyan}"
-echo -e "3. Turn off update notification          ${B}$noti"
+echo -e "3. Turn off update notification          ${B}$noti \n${BCyan}"
 echo -e "4. Change ChatGPT's tone                     "
-echo -e "5. Change ChatGPT's writing style             \n${Y}"
+echo -e "5. Change ChatGPT's writing style            "
+echo -e "6. Change ChatGPT's engine                   "
 read -p "Enter an option (exit to leave): " select
 }
 
@@ -246,6 +247,9 @@ esac
 sed -i "s/engine=\".*\"/engine=\"$engine\"/" ~/CLI-GPT/gpt.py
 
 echo -e "${G}Engine successfully updated to $engine in gpt.py${Off}"
+clear
+update_options
+print_options
         ;;
     *)
         clear
