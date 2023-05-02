@@ -26,9 +26,8 @@ fi
 }
 update_options
 
-echo -e ""
-
 print_options () {
+echo -e "\nCLI-GPT settings:\n"
 echo -e "1. Always overwrite '~/.bash_aliases'    $aliases_set"
 echo -e "2. Always keep API key                   $keep_key"
 echo -e "3. Turn off update notification          $noti \n"
@@ -40,45 +39,45 @@ print_options
 while true; do
 case $select in
     1)
-        read -p "Do want to always overwrite '~/.bash_aliases'? (y/n): " overwrite_aliases
-        if [[ $overwrite_aliases =~ ^[Yy]$ ]]; then
-            new_overwrite_aliases=true
-            sed -i "s/^ALWAYS_OVERWRITE_ALIASES=.*/ALWAYS_OVERWRITE_ALIASES=$new_overwrite_aliases/" "$config_file"
+        read -p "Do want to always overwrite '~/.bash_aliases'? (Y/n): " overwrite_aliases
+        if [[ $overwrite_aliases =~ ^[Nn]$ ]]; then
+            sed -i "s/^ALWAYS_OVERWRITE_ALIASES=.*/ALWAYS_OVERWRITE_ALIASES=false/" "$config_file"
             clear
             update_options
             print_options
         else
-            sed -i "s/^ALWAYS_OVERWRITE_ALIASES=.*/ALWAYS_OVERWRITE_ALIASES=false/" "$config_file"
+            new_overwrite_aliases=true
+            sed -i "s/^ALWAYS_OVERWRITE_ALIASES=.*/ALWAYS_OVERWRITE_ALIASES=$new_overwrite_aliases/" "$config_file"
             clear
             update_options
             print_options
         fi
         ;;
     2)
-        read -p "Do want to always keep your API key? (y/n): " keep_api_key
-        if [[ $keep_api_key =~ ^[Yy]$ ]]; then
-            new_keep_api_key=true
-            sed -i "s/^ALWAYS_KEEP_API_KEY=.*/ALWAYS_KEEP_API_KEY=$new_keep_api_key/" "$config_file"
+        read -p "Do want to always keep your API key? (Y/n): " keep_api_key
+        if [[ $keep_api_key =~ ^[Nn]$ ]]; then
+            sed -i "s/^ALWAYS_KEEP_API_KEY=.*/ALWAYS_KEEP_API_KEY=false/" "$config_file"
             clear
             update_options
             print_options
         else
-            sed -i "s/^ALWAYS_KEEP_API_KEY=.*/ALWAYS_KEEP_API_KEY=false/" "$config_file"
+            new_keep_api_key=true
+            sed -i "s/^ALWAYS_KEEP_API_KEY=.*/ALWAYS_KEEP_API_KEY=$new_keep_api_key/" "$config_file"
             clear
             update_options
             print_options
         fi
         ;;
     3)
-        read -p "Do want to turn off the update notification when running 'gpt'? (y/n): " update_notification
-        if [[ $update_notification =~ ^[Yy]$ ]]; then
-            new_update_notification=false
-            sed -i "s/^UPDATE_NOTIFICATION=.*/UPDATE_NOTIFICATION=$new_update_notification/" "$config_file"
+        read -p "Do want to turn OFF the update notification when running 'gpt'? (Y/n): " update_notification
+        if [[ $update_notification =~ ^[Nn]$ ]]; then
+            sed -i "s/^UPDATE_NOTIFICATION=.*/UPDATE_NOTIFICATION=true/" "$config_file"
             clear
             update_options
             print_options
         else
-            sed -i "s/^UPDATE_NOTIFICATION=.*/UPDATE_NOTIFICATION=true/" "$config_file"
+            new_update_notification=false
+            sed -i "s/^UPDATE_NOTIFICATION=.*/UPDATE_NOTIFICATION=$new_update_notification/" "$config_file"
             clear
             update_options
             print_options
