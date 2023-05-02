@@ -5,8 +5,8 @@ import colorama
 from colorama import Fore, Back, Style
 import requests
 
+# Define directory
 CLI_GPT_DIRECTORY = os.path.expanduser("~/CLI-GPT")
-
 
 def is_git_repository():
     return os.path.exists(os.path.join(CLI_GPT_DIRECTORY, ".git"))
