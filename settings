@@ -8,7 +8,7 @@ update_options () {
 source $config_file
 style_desc=$(grep "style_desc" ~/CLI-GPT/gpt.py | awk -F'"' '{print $2}')
 tone_desc=$(grep "tone_desc" ~/CLI-GPT/gpt.py | awk -F'"' '{print $2}')
-
+engine=$(grep "engine" ~/CLI-GPT/gpt.py | awk -F'"' '{print $2}')
 if [ "$ALWAYS_OVERWRITE_ALIASES" == "true" ]; then
     aliases_set="[✓]"
 else
@@ -36,7 +36,7 @@ echo -e "2. Always keep API key                   ${BBlue}$keep_key${Cyan}"
 echo -e "3. Turn off update notification          ${BBlue}$noti \n${Cyan}"
 echo -e "4. Change ChatGPT's tone                 ${BBlue}[$tone_desc]${Cyan}"
 echo -e "5. Change ChatGPT's writing style        ${BBlue}[$style_desc]${Cyan}"
-echo -e "6. Change ChatGPT's engine                   \n${Y}"
+echo -e "6. Change ChatGPT's engine               ${BBlue}[$engine]\n${Y}"
 read -p "Enter an option (exit to leave): " select
 }
 
