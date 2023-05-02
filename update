@@ -57,6 +57,7 @@ else
         echo -e "${Cyan}API Key kept!${Y}"
     fi
 fi
+
 add_aliases () {
   echo -e "alias gpt='python3 ~/CLI-GPT/gpt.py'" > ~/.bash_aliases
   echo -e "alias gpt-update='bash ~/CLI-GPT/update && source ~/.bash_aliases'" >> ~/.bash_aliases
