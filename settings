@@ -140,6 +140,8 @@ case $tone_choice in
 esac
 sed -i "s/tone=\".*\"/tone=\"$tone\"/" ~/CLI-GPT/gpt.py
 echo -e "${G}Updated tone to ${Black}${On_White}$tone_desc${Off}${G} in 'gpt.py'${Off}"
+update_options
+print_options
         ;;
      exit|x|q|quit)
         exit
