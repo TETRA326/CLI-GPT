@@ -77,10 +77,11 @@ Run `gpt-tone` to edit the Tone of voice and the Writing Style of ChatGPT. To re
 *Hint:* Try choosing #23. You can ask it almost anything.
 
 ## Uninstall
-Follow these 2 commands:
+Follow these 3 commands:
 ```
 cd ~
 rm -rf CLI-GPT
+rm .config/cli-gpt.conf
 ```
 And if you chose to overwrite `.bash_aliases`:
 ```
