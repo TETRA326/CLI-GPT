@@ -34,6 +34,7 @@ fi
 
 # Give script perms
 chmod +x $HOME/CLI-GPT/update
+chmod +x $HOME/CLI-GPT/settings
 chmod +x $HOME/CLI-GPT/change-engine
 chmod +x $HOME/CLI-GPT/tone
 chmod +x $HOME/CLI-GPT/extras/defaults
