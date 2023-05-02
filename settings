@@ -84,7 +84,7 @@ case $select in
             print_options
         fi
         ;;
-     exit)
+     exit|x|q|quit)
         exit
         ;;
     *)
