@@ -1,6 +1,8 @@
 #!/bin/bash
 source ~/CLI-GPT/extras/colors
+echo -e "${Y}Changing the engine is now possible through ${BYellow}'gpt-settings'${Off}"
 
+<<oldcode
 echo -e "${B}Choose an option for the OpenAI engine${Off}\n"
 echo -e "${Cyan}1. Davinci 3 (Recommended)"
 echo "2. Davinci 2"
@@ -23,3 +25,4 @@ esac
 sed -i "s/engine=\".*\"/engine=\"$engine\"/" ~/CLI-GPT/gpt.py
 
 echo -e "${G}Engine successfully updated to $engine in gpt.py${Off}"
+oldcode
