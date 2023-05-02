@@ -3,10 +3,14 @@
 # Import Colors
 source ~/CLI-GPT/extras/colors
 
-# Create config file
-echo "ALWAYS_OVERWRITE_ALIASES=false" > ~/.config/cli-gpt.conf
-echo "ALWAYS_KEEP_API_KEY=false" >> ~/.config/cli-gpt.conf
-echo "UPDATE_NOTIFICATION=true" >> ~/.config/cli-gpt.conf
+# Check for config file
+if [ -f ~/.config/cli-gpt.conf ]; then
+    nothing=true
+else
+    echo "ALWAYS_OVERWRITE_ALIASES=false" > ~/.config/cli-gpt.conf
+    echo "ALWAYS_KEEP_API_KEY=false" >> ~/.config/cli-gpt.conf
+    echo "UPDATE_NOTIFICATION=true" >> ~/.config/cli-gpt.conf
+fi
 
 echo -e "\n${Cyan}Welcome to the first time setup for CLI-GPT!${Off}\n"
 
