@@ -2,8 +2,16 @@
 
 # Import colors
 source ~/CLI-GPT/extras/colors
-# Import config
-source ~/.config/cli-gpt.conf
+
+# Check for config file
+if [ -f ~/.config/cli-gpt.conf ]; then
+    source ~/.config/cli-gpt.conf
+else
+    echo "ALWAYS_OVERWRITE_ALIASES=false" > ~/.config/cli-gpt.conf
+    echo "ALWAYS_KEEP_API_KEY=false" >> ~/.config/cli-gpt.conf
+    echo "UPDATE_NOTIFICATION=true" >> ~/.config/cli-gpt.conf
+    source ~/.config/cli-gpt.conf
+fi
 
 # Grab current API key from gpt.py
 current_key=$(grep "openai.api_key" ~/CLI-GPT/gpt.py | awk -F'"' '{print $2}')
