@@ -1,1 +1,96 @@
 #!/bin/bash
+
+source ~/CLI-GPT/extras/colors
+
+config_file="$HOME/.config/cli-gpt.conf"
+
+update_options () {
+source $config_file
+if [ "$ALWAYS_OVERWRITE_ALIASES" == "true" ]; then
+    aliases_set="[✓]"
+else
+    aliases_set="[ ]"
+fi
+
+if [ "$ALWAYS_KEEP_API_KEY" == "true" ]; then
+    keep_key="[✓]"
+else
+    keep_key="[ ]"
+fi
+
+if [ "$UPDATE_NOTIFICATION" == "true" ]; then
+    noti="[✓]"
+else
+    noti="[ ]"
+fi
+}
+update_options
+
+echo -e ""
+
+print_options () {
+echo -e "1. Always overwrite '~/.bash_aliases'    $aliases_set"
+echo -e "2. Always keep API key                   $keep_key"
+echo -e "3. Turn off update notification          $noti \n"
+read -p "Enter an option (exit to leave): " select
+}
+
+print_options
+
+while true; do
+case $select in
+    1)
+        read -p "Do want to always overwrite '~/.bash_aliases'? (y/n): " overwrite_aliases
+        if [[ $overwrite_aliases =~ ^[Yy]$ ]]; then
+            new_overwrite_aliases=true
+            sed -i "s/^ALWAYS_OVERWRITE_ALIASES=.*/ALWAYS_OVERWRITE_ALIASES=$new_overwrite_aliases/" "$config_file"
+            clear
+            update_options
+            print_options
+        else
+            sed -i "s/^ALWAYS_OVERWRITE_ALIASES=.*/ALWAYS_OVERWRITE_ALIASES=false/" "$config_file"
+            clear
+            update_options
+            print_options
+        fi
+        ;;
+    2)
+        read -p "Do want to always keep your API key? (y/n): " keep_api_key
+        if [[ $keep_api_key =~ ^[Yy]$ ]]; then
+            new_keep_api_key=true
+            sed -i "s/^ALWAYS_KEEP_API_KEY=.*/ALWAYS_KEEP_API_KEY=$new_keep_api_key/" "$config_file"
+            clear
+            update_options
+            print_options
+        else
+            sed -i "s/^ALWAYS_KEEP_API_KEY=.*/ALWAYS_KEEP_API_KEY=false/" "$config_file"
+            clear
+            update_options
+            print_options
+        fi
+        ;;
+    3)
+        read -p "Do want to turn off the update notification when running 'gpt'? (y/n): " update_notification
+        if [[ $update_notification =~ ^[Yy]$ ]]; then
+            new_update_notification=false
+            sed -i "s/^UPDATE_NOTIFICATION=.*/UPDATE_NOTIFICATION=$new_update_notification/" "$config_file"
+            clear
+            update_options
+            print_options
+        else
+            sed -i "s/^UPDATE_NOTIFICATION=.*/UPDATE_NOTIFICATION=true/" "$config_file"
+            clear
+            update_options
+            print_options
+        fi
+        ;;
+     exit)
+        exit
+        ;;
+    *)
+        clear
+        echo "Invalid option."
+        print_options
+        ;;
+esac
+done
