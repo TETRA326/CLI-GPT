@@ -3,6 +3,11 @@
 # Import Colors
 source ~/CLI-GPT/extras/colors
 
+# Create config file
+echo "ALWAYS_OVERWRITE_ALIASES=false" > ~/.config/gpt.conf
+echo "ALWAYS_KEEP_API_KEY=false" >> ~/.config/gpt.conf
+echo "UPDATE_NOTIFICATION=true" >> ~/.config/gpt.conf
+
 echo -e "\n${Cyan}Welcome to the first time setup for CLI-GPT!${Off}\n"
 
 # sudo apt install python3-pip -y
@@ -58,7 +63,7 @@ if [ -f ~/.bash_aliases ]; then
         add_aliases
     fi
 else
-    sed -i "s/ALWAYS_OVERWRITE_ALIASES=false/ALWAYS_OVERWRITE_ALIASES=true/" ~/CLI-GPT/extras/config
+    sed -i "s/ALWAYS_OVERWRITE_ALIASES=false/ALWAYS_OVERWRITE_ALIASES=true/" ~/.config/gpt.conf
     add_aliases
 fi
 
