@@ -5,31 +5,42 @@ import colorama
 from colorama import Fore, Back, Style
 import requests
 
-# Define directory
-CLI_GPT_DIRECTORY = os.path.expanduser("~/CLI-GPT")
+# Check for update notification disabled
+config_file = os.path.expanduser('~/.config/cli-gpt.conf')
+with open(config_file, 'r') as f:
+    for line in f:
+        if line.startswith('UPDATE_NOTIFICATION='):
+            update_notification = line.strip().split('=')[1]
+            break
+print(update_notification)
+if update_notification == "false":
+    nothing="true"
+else:
+    # Define directory
+    CLI_GPT_DIRECTORY = os.path.expanduser("~/CLI-GPT")
 
-def is_git_repository():
-    return os.path.exists(os.path.join(CLI_GPT_DIRECTORY, ".git"))
+    def is_git_repository():
+        return os.path.exists(os.path.join(CLI_GPT_DIRECTORY, ".git"))
 
 
-def get_latest_commit_hash():
-    url = f"https://api.github.com/repos/TETRA326/CLI-GPT/commits/main"
-    response = requests.get(url)
-    latest_commit_hash = response.json()["sha"]
-    return latest_commit_hash
+    def get_latest_commit_hash():
+        url = f"https://api.github.com/repos/TETRA326/CLI-GPT/commits/main"
+        response = requests.get(url)
+        latest_commit_hash = response.json()["sha"]
+        return latest_commit_hash
 
 
-def check_for_updates():
-    if not is_git_repository():
-        print(Fore.YELLOW + "WARNING: something went wrong (git repo not found)" + Style.RESET_ALL)
-        return
+    def check_for_updates():
+        if not is_git_repository():
+            print(Fore.YELLOW + "WARNING: something went wrong (git repo not found)" + Style.RESET_ALL)
+            return
 
-    latest_commit_hash = get_latest_commit_hash()
-    current_commit_hash = os.popen(f'cd {CLI_GPT_DIRECTORY} && git rev-parse HEAD').read().strip()
-    if latest_commit_hash != current_commit_hash:
-        print(Fore.RED + Style.BRIGHT + "NOTICE: " + Style.NORMAL + "An update is available. Run gpt-update to get the latest features." + Style.RESET_ALL)
+        latest_commit_hash = get_latest_commit_hash()
+        current_commit_hash = os.popen(f'cd {CLI_GPT_DIRECTORY} && git rev-parse HEAD').read().strip()
+        if latest_commit_hash != current_commit_hash:
+            print(Fore.RED + Style.BRIGHT + "NOTICE: " + Style.NORMAL + "An update is available. Run gpt-update to get the latest features." + Style.RESET_ALL)
 
-check_for_updates()
+    check_for_updates()
 print(Fore.BLUE + "Commands:")
 print(Style.BRIGHT + "exit" + Style.NORMAL + "  [quit, x, q]    - quit conversation")
 print(Style.BRIGHT + "clear" + Style.NORMAL + "                 - clear the screen")
