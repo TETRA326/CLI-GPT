@@ -57,8 +57,8 @@ history = []
 # Tone and writing style
 tone=" "
 writingstyle=" "
-tone_desc=" "
-style_desc=" "
+tone_desc="Default"
+style_desc="Default"
 
 # Define function to retrieve bot response
 def get_bot_response(prompt, history):
