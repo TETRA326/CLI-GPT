@@ -27,10 +27,10 @@ fi
 update_options
 
 print_options () {
-echo -e "\nCLI-GPT settings:\n"
-echo -e "1. Always overwrite '~/.bash_aliases'    $aliases_set"
-echo -e "2. Always keep API key                   $keep_key"
-echo -e "3. Turn off update notification          $noti \n"
+echo -e "\n${G}CLI-GPT settings:${Cyan}\n"
+echo -e "1. Always overwrite '~/.bash_aliases'    ${B}$aliases_set${Cyan}"
+echo -e "2. Always keep API key                   ${B}$keep_key${Cyan}"
+echo -e "3. Turn off update notification          ${B}$noti \n${Y}"
 read -p "Enter an option (exit to leave): " select
 }
 
