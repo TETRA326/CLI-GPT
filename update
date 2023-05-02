@@ -38,22 +38,25 @@ chmod +x $HOME/CLI-GPT/change-engine
 chmod +x $HOME/CLI-GPT/tone
 chmod +x $HOME/CLI-GPT/extras/defaults
 
-# Ask to change key
-echo -e "\n${G}API Key found in 'gpt.py'! ${Black}${On_White}($current_key)${Off}${Y}"
-read -p "Do you want to change your OpenAI API key? (y/N): " update_key
-
-if [ "$update_key" == "y" ] || [ "$update_key" == "Y" ]; then
-    echo -e "${Y}"
-    read -p "Please enter your OpenAI API key ('CTRL + SHIFT + V' to paste): " key
-    echo -e "${Off}"
-    # Replace the API key in gpt.py
-    sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" ~/CLI-GPT/gpt.py
-    echo -e "${G}API key successfully updated in 'gpt.py'${Y}"
-else
+if [ "$ALWAYS_KEEP_API_KEY" == "true" ]; then
     sed -i "s/openai.api_key = \"\"/openai.api_key = \"$current_key\"/" ~/CLI-GPT/gpt.py
     echo -e "${Cyan}API Key kept!${Y}"
+else
+    # Ask to change key
+    echo -e "\n${G}API Key found in 'gpt.py'! ${Black}${On_White}($current_key)${Off}${Y}"
+    read -p "Do you want to change your OpenAI API key? (y/N): " update_key
+    if [ "$update_key" == "y" ] || [ "$update_key" == "Y" ]; then
+        echo -e "${Y}"
+        read -p "Please enter your OpenAI API key ('CTRL + SHIFT + V' to paste): " key
+        echo -e "${Off}"
+        # Replace the API key in gpt.py
+        sed -i "s/openai.api_key = \"\"/openai.api_key = \"$key\"/" ~/CLI-GPT/gpt.py
+        echo -e "${G}API key successfully updated in 'gpt.py'${Y}"
+    else
+        sed -i "s/openai.api_key = \"\"/openai.api_key = \"$current_key\"/" ~/CLI-GPT/gpt.py
+        echo -e "${Cyan}API Key kept!${Y}"
+    fi
 fi
-
 add_aliases () {
   echo -e "alias gpt='python3 ~/CLI-GPT/gpt.py'" > ~/.bash_aliases
   echo -e "alias gpt-update='bash ~/CLI-GPT/update && source ~/.bash_aliases'" >> ~/.bash_aliases
