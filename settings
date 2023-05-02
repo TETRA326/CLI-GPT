@@ -6,6 +6,9 @@ config_file="$HOME/.config/cli-gpt.conf"
 
 update_options () {
 source $config_file
+writingstyle=$(grep "writingstyle" ~/CLI-GPT/gpt.py | awk -F'"' '{print $2}')
+tone=$(grep "tone" ~/CLI-GPT/gpt.py | awk -F'"' '{print $2}')
+
 if [ "$ALWAYS_OVERWRITE_ALIASES" == "true" ]; then
     aliases_set="[✓]"
 else
@@ -141,6 +144,7 @@ case $tone_choice in
     *) echo "Invalid choice"; exit 1;;
 esac
 sed -i "s/tone=\".*\"/tone=\"$tone\"/" ~/CLI-GPT/gpt.py
+sed -i "s/tone_desc=\".*\"/tone_desc=\"$tone_desc\"/" ~/CLI-GPT/gpt.py
 echo -e "${G}Updated tone to ${Black}${On_White}$tone_desc${Off}${G} in 'gpt.py'${Off}"
 clear
 update_options
@@ -219,6 +223,7 @@ case $style_choice in
     *) echo "Invalid choice"; exit 1;;
 esac
 sed -i "s/writingstyle=\".*\"/writingstyle=\"$writingstyle\"/" ~/CLI-GPT/gpt.py
+sed -i "s/style_desc=\".*\"/style_desc=\"$style_desc\"/" ~/CLI-GPT/gpt.py
 echo -e "${G}Updated style to ${Black}${On_White}$style_desc${Off}${G} in 'gpt.py'${Off}"
 clear
 update_options
