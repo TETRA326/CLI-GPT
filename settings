@@ -151,6 +151,7 @@ update_options
 print_options
         ;;
      exit|x|q|quit)
+        echo -e "${Off}"
         exit
         ;;
     5)
