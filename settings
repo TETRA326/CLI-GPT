@@ -6,8 +6,8 @@ config_file="$HOME/.config/cli-gpt.conf"
 
 update_options () {
 source $config_file
-writingstyle=$(grep "writingstyle" ~/CLI-GPT/gpt.py | awk -F'"' '{print $2}')
-tone=$(grep "tone" ~/CLI-GPT/gpt.py | awk -F'"' '{print $2}')
+style_desc=$(grep "style_desc" ~/CLI-GPT/gpt.py | awk -F'"' '{print $2}')
+tone_desc=$(grep "tone_desc" ~/CLI-GPT/gpt.py | awk -F'"' '{print $2}')
 
 if [ "$ALWAYS_OVERWRITE_ALIASES" == "true" ]; then
     aliases_set="[✓]"
@@ -31,11 +31,11 @@ update_options
 
 print_options () {
 echo -e "\n${G}CLI-GPT settings:${Cyan}\n"
-echo -e "1. Always overwrite '~/.bash_aliases'    ${B}$aliases_set${Cyan}"
-echo -e "2. Always keep API key                   ${B}$keep_key${Cyan}"
-echo -e "3. Turn off update notification          ${B}$noti \n${BCyan}"
-echo -e "4. Change ChatGPT's tone                     "
-echo -e "5. Change ChatGPT's writing style            "
+echo -e "1. Always overwrite '~/.bash_aliases'    ${BBlue}$aliases_set${Cyan}"
+echo -e "2. Always keep API key                   ${BBlue}$keep_key${Cyan}"
+echo -e "3. Turn off update notification          ${BBlue}$noti \n${Cyan}"
+echo -e "4. Change ChatGPT's tone                 ${BBlue}[$tone_desc]${Cyan}"
+echo -e "5. Change ChatGPT's writing style        ${BBlue}[$style_desc]${Cyan}"
 echo -e "6. Change ChatGPT's engine                   \n${Y}"
 read -p "Enter an option (exit to leave): " select
 }
