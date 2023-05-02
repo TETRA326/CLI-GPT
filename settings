@@ -18,7 +18,7 @@ else
     keep_key="[ ]"
 fi
 
-if [ "$UPDATE_NOTIFICATION" == "true" ]; then
+if [ "$UPDATE_NOTIFICATION" == "false" ]; then
     noti="[✓]"
 else
     noti="[ ]"
