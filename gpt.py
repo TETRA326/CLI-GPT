@@ -42,6 +42,7 @@ else:
             print(Fore.RED + Style.BRIGHT + "NOTICE: " + Style.NORMAL + "An update is available. Run " + Fore.YELLOW + Style.BRIGHT + "gpt-update" + Fore.RED + Style.NORMAL + " to get the latest features." + Style.RESET_ALL)
 
     check_for_updates()
+
 print(Fore.BLUE + "Commands:")
 print(Style.BRIGHT + "exit" + Style.NORMAL + "  [quit, x, q]    - quit conversation")
 print(Style.BRIGHT + "clear" + Style.NORMAL + "                 - clear the screen")
