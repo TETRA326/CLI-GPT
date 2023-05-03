@@ -1,6 +1,8 @@
 #!/bin/bash
 source ~/CLI-GPT/extras/colors
 echo -e "${Y}Changing the tone and writing style is now possible through ${BYellow}'gpt-settings'${Off}"
+
+######## Archived ########
 <<oldcode
 echo -e "${B}Choose an option to change ChatGPT's Tone${Off}\n"
 echo -e "${G}1. Default ${Off}"
@@ -132,3 +134,4 @@ sed -i "s/writingstyle=\".*\"/writingstyle=\"$writingstyle\"/" ~/CLI-GPT/gpt.py
 
 echo -e "${G}Updated tone to ${Black}${On_White}$tone_desc${Off}${G} and style to ${Black}${On_White}$style_desc${Off}${G} in 'gpt.py'${Off}"
 oldcode
+######## Archived ########
