@@ -13,7 +13,7 @@ with open(config_file, 'r') as f:
             update_notification = line.strip().split('=')[1]
             break
 
-# Get settings and check them
+# check value
 if update_notification == "false":
     nothing="true"
 else:
