@@ -2,7 +2,7 @@
 
 # Import colors
 source ~/CLI-GPT/extras/colors
-
+# Set config file var
 config_file="$HOME/.config/cli-gpt.conf"
 
 # Get current values from config
@@ -11,18 +11,17 @@ source $config_file
 style_desc=$(grep "style_desc" ~/CLI-GPT/gpt.py | awk -F'"' '{print $2}')
 tone_desc=$(grep "tone_desc" ~/CLI-GPT/gpt.py | awk -F'"' '{print $2}')
 engine=$(grep "engine" ~/CLI-GPT/gpt.py | awk -F'"' '{print $2}')
+
 if [ "$ALWAYS_OVERWRITE_ALIASES" == "true" ]; then
     aliases_set="[✓]"
 else
     aliases_set="[ ]"
 fi
-
 if [ "$ALWAYS_KEEP_API_KEY" == "true" ]; then
     keep_key="[✓]"
 else
     keep_key="[ ]"
 fi
-
 if [ "$UPDATE_NOTIFICATION" == "true" ]; then
     noti="[✓]"
 else
@@ -31,6 +30,7 @@ fi
 }
 update_options
 
+# Print settings with their current status
 print_options () {
 echo -e "\n${G}CLI-GPT settings:${Cyan}\n"
 echo -e "1. Always overwrite '~/.bash_aliases'    ${BBlue}$aliases_set${Cyan}"
@@ -41,9 +41,9 @@ echo -e "5. Change ChatGPT's writing style        ${BBlue}[$style_desc]${Cyan}"
 echo -e "6. Change ChatGPT's engine               ${BBlue}[$engine]\n${Y}"
 read -p "Enter an option (exit to leave): " select
 }
-
 print_options
 
+# Loop through user response
 while true; do
 case $select in
     1)
