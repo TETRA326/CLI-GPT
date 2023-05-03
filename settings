@@ -39,7 +39,7 @@ echo -e "3. Update notification                   ${BBlue}$noti \n${Cyan}"
 echo -e "4. Change ChatGPT's tone                 ${BBlue}[$tone_desc]${Cyan}"
 echo -e "5. Change ChatGPT's writing style        ${BBlue}[$style_desc]${Cyan}"
 echo -e "6. Change ChatGPT's engine               ${BBlue}[$engine]\n${Y}"
-read -n 1 -p "Enter an option (x or q to leave): " select
+read -p "Enter an option (x or q to leave): " -n 1 select
 }
 print_options
 
