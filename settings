@@ -45,8 +45,7 @@ print_options
 while true; do
 case $select in
     1)
-        read -p "Do want to always overwrite '~/.bash_aliases'? (Y/n): " overwrite_aliases
-        if [[ $overwrite_aliases =~ ^[Nn]$ ]]; then
+        if [ "$ALWAYS_OVERWRITE_ALIASES" == "true" ]; then
             sed -i "s/^ALWAYS_OVERWRITE_ALIASES=.*/ALWAYS_OVERWRITE_ALIASES=false/" "$config_file"
             clear
             update_options
@@ -60,8 +59,7 @@ case $select in
         fi
         ;;
     2)
-        read -p "Do want to always keep your API key? (Y/n): " keep_api_key
-        if [[ $keep_api_key =~ ^[Nn]$ ]]; then
+        if [ "$ALWAYS_KEEP_API_KEY" == "true" ]; then
             sed -i "s/^ALWAYS_KEEP_API_KEY=.*/ALWAYS_KEEP_API_KEY=false/" "$config_file"
             clear
             update_options
@@ -75,8 +73,7 @@ case $select in
         fi
         ;;
     3)
-        read -p "Do want to turn OFF the update notification when running 'gpt'? (Y/n): " update_notification
-        if [[ $update_notification =~ ^[Nn]$ ]]; then
+        if [ "$UPDATE_NOTIFICATION" == "false" ]; then
             sed -i "s/^UPDATE_NOTIFICATION=.*/UPDATE_NOTIFICATION=true/" "$config_file"
             clear
             update_options
