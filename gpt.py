@@ -39,7 +39,7 @@ else:
         latest_commit_hash = get_latest_commit_hash()
         current_commit_hash = os.popen(f'cd {CLI_GPT_DIRECTORY} && git rev-parse HEAD').read().strip()
         if latest_commit_hash != current_commit_hash:
-            print(Fore.RED + Style.BRIGHT + "NOTICE: " + Style.NORMAL + "An update is available. Run" + Fore.YELLOW + Style.BRIGHT + "gpt-update" + Fore.RED + Style.NORMAL + "to get the latest features." + Style.RESET_ALL)
+            print(Fore.RED + Style.BRIGHT + "NOTICE: " + Style.NORMAL + "An update is available. Run " + Fore.YELLOW + Style.BRIGHT + "gpt-update" + Fore.RED + Style.NORMAL + " to get the latest features." + Style.RESET_ALL)
 
     check_for_updates()
 print(Fore.BLUE + "Commands:")
