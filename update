@@ -3,7 +3,7 @@
 # Import colors
 source ~/CLI-GPT/extras/colors
 
-# Check for config file
+# Check for config file, if not there, create it
 if [ -f ~/.config/cli-gpt.conf ]; then
     source ~/.config/cli-gpt.conf
 else
@@ -47,6 +47,7 @@ chmod +x $HOME/CLI-GPT/change-engine
 chmod +x $HOME/CLI-GPT/tone
 chmod +x $HOME/CLI-GPT/extras/defaults
 
+# Check value from config
 if [ "$ALWAYS_KEEP_API_KEY" == "true" ]; then
     sed -i "s/openai.api_key = \"\"/openai.api_key = \"$current_key\"/" ~/CLI-GPT/gpt.py
     echo -e "${Cyan}API Key kept!${Y}"
@@ -68,22 +69,23 @@ else
 fi
 
 # Attempt to remove old aliases in .bashrc
-# Define the aliases to remove
+# Define alias pattern to look for
 aliases=(
     "alias gpt"
 )
 # Loop through the aliases and remove them from ~/.bashrc
 for alias in "${aliases[@]}"
 do
-    # Check if the alias exists in ~/.bashrc
+    # Check if the pattern exists in ~/.bashrc
     if grep -q "^$alias" ~/.bashrc
     then
-        # If the alias exists, remove it
+        # If the pattern exists, remove all lines that start with it
         sed -i "/^$alias/d" ~/.bashrc
         echo -e "${B}Removed old aliases from ${BBlue}'~/.bashrc'${Y}"
     fi
 done
 
+# Function for adding aliases to .bash_aliases
 add_aliases () {
   echo -e "alias gpt='python3 ~/CLI-GPT/gpt.py'" > ~/.bash_aliases
   echo -e "alias gpt-update='bash ~/CLI-GPT/update && source ~/.bash_aliases'" >> ~/.bash_aliases
@@ -94,6 +96,7 @@ add_aliases () {
   echo -e "${G}Aliases added successfully in ${BGreen}'~/.bash_aliases'${Off}"
 }
 
+# Check value from config
 if [ "$ALWAYS_OVERWRITE_ALIASES" == "true" ]; then
     add_aliases
 else
