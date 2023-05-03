@@ -5,6 +5,9 @@ import colorama
 from colorama import Fore, Back, Style
 import requests
 
+# Clear screen -wanted by tetra
+print("\033c")
+
 # Check for update notification disabled
 config_file = os.path.expanduser('~/.config/cli-gpt.conf')
 with open(config_file, 'r') as f:
