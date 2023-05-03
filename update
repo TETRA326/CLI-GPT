@@ -71,11 +71,6 @@ fi
 # Define the aliases to remove
 aliases=(
     "alias gpt"
-    "alias gpt-update"
-    "alias gpt-engine"
-    "alias gpt-tone"
-    "alias gpt-default"
-    "alias gpt-settings"
 )
 
 # Loop through the aliases and remove them from ~/.bashrc
