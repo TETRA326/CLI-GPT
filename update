@@ -81,10 +81,7 @@ do
     then
         # If the alias exists, remove it
         sed -i "/^$alias/d" ~/.bashrc
-        echo "Removed $alias from ~/.bashrc"
-    else
-        # If the alias does not exist, print a message
-        echo "$alias not found in ~/.bashrc"
+        echo -e "${B}Removed old aliases from '~/.bashrc'"
     fi
 done
 
