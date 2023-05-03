@@ -21,7 +21,7 @@ else
     keep_key="[ ]"
 fi
 
-if [ "$UPDATE_NOTIFICATION" == "false" ]; then
+if [ "$UPDATE_NOTIFICATION" == "true" ]; then
     noti="[✓]"
 else
     noti="[ ]"
@@ -33,7 +33,7 @@ print_options () {
 echo -e "\n${G}CLI-GPT settings:${Cyan}\n"
 echo -e "1. Always overwrite '~/.bash_aliases'    ${BBlue}$aliases_set${Cyan}"
 echo -e "2. Always keep API key                   ${BBlue}$keep_key${Cyan}"
-echo -e "3. Turn off update notification          ${BBlue}$noti \n${Cyan}"
+echo -e "3. Update notification                   ${BBlue}$noti \n${Cyan}"
 echo -e "4. Change ChatGPT's tone                 ${BBlue}[$tone_desc]${Cyan}"
 echo -e "5. Change ChatGPT's writing style        ${BBlue}[$style_desc]${Cyan}"
 echo -e "6. Change ChatGPT's engine               ${BBlue}[$engine]\n${Y}"
@@ -142,7 +142,7 @@ case $tone_choice in
 esac
 sed -i "s/tone=\".*\"/tone=\"$tone\"/" ~/CLI-GPT/gpt.py
 sed -i "s/tone_desc=\".*\"/tone_desc=\"$tone_desc\"/" ~/CLI-GPT/gpt.py
-echo -e "${G}Updated tone to ${Black}${On_White}$tone_desc${Off}${G} in 'gpt.py'${Off}"
+#echo -e "${G}Updated tone to ${Black}${On_White}$tone_desc${Off}${G} in 'gpt.py'${Off}"
 clear
 update_options
 print_options
@@ -222,7 +222,7 @@ case $style_choice in
 esac
 sed -i "s/writingstyle=\".*\"/writingstyle=\"$writingstyle\"/" ~/CLI-GPT/gpt.py
 sed -i "s/style_desc=\".*\"/style_desc=\"$style_desc\"/" ~/CLI-GPT/gpt.py
-echo -e "${G}Updated style to ${Black}${On_White}$style_desc${Off}${G} in 'gpt.py'${Off}"
+#echo -e "${G}Updated style to ${Black}${On_White}$style_desc${Off}${G} in 'gpt.py'${Off}"
 clear
 update_options
 print_options
@@ -249,7 +249,7 @@ esac
 # Update gpt.py with the chosen engine
 sed -i "s/engine=\".*\"/engine=\"$engine\"/" ~/CLI-GPT/gpt.py
 
-echo -e "${G}Engine successfully updated to $engine in gpt.py${Off}"
+#echo -e "${G}Engine successfully updated to $engine in gpt.py${Off}"
 clear
 update_options
 print_options
