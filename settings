@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Import colors
 source ~/CLI-GPT/extras/colors
 
 config_file="$HOME/.config/cli-gpt.conf"
