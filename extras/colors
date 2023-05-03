@@ -11,7 +11,7 @@ B='\033[0;34m'         # Blue
 P='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
 Grey='\033[1;30m'         # Grey
-SpecialGreen='\033[38;2;54;140;112m'         # Grey
+SpecialGreen='\e[38;2;15;158;123m'         # OpenAI Green
 # Bold
 BBlack='\033[1;30m'       # Black
 BRed='\033[1;31m'         # Red
