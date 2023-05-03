@@ -67,6 +67,32 @@ else
     fi
 fi
 
+# Attempt to remove old aliases in .bashrc
+# Define the aliases to remove
+aliases=(
+    "alias gpt="
+    "alias gpt-update="
+    "alias gpt-engine="
+    "alias gpt-tone="
+    "alias gpt-default="
+    "alias gpt-settings="
+)
+
+# Loop through the aliases and remove them from ~/.bashrc
+for alias in "${aliases[@]}"
+do
+    # Check if the alias exists in ~/.bashrc
+    if grep -q "^$alias" ~/.bashrc
+    then
+        # If the alias exists, remove it
+        sed -i "/^$alias/d" ~/.bashrc
+        echo "Removed $alias from ~/.bashrc"
+    else
+        # If the alias does not exist, print a message
+        echo "$alias not found in ~/.bashrc"
+    fi
+done
+
 add_aliases () {
   echo -e "alias gpt='python3 ~/CLI-GPT/gpt.py'" > ~/.bash_aliases
   echo -e "alias gpt-update='bash ~/CLI-GPT/update && source ~/.bash_aliases'" >> ~/.bash_aliases
