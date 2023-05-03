@@ -60,7 +60,7 @@ python3 ~/CLI-GPT/gpt.py
 ```
 This will give you a similar interface to talk to ChatGPT with. You can bookmark the tab to return later, or drag this: [shell](https://shell.cloud.google.com) to the bookmark bar. Cloud Shell should recover your session.
 
-*Hint:* You can use the `clear` command to remove all the text in the terminal and clear your workspace.
+*Tip:* You can use the `clear` command to remove all the text in the terminal and clear your workspace.
 
 ## Update
 Run this every-so-often to make sure your code is up-to-date. Or, if you experience issues, you can run `gpt-update` to reset everything.
@@ -74,7 +74,7 @@ You can change the engine that you use by using `gpt-engine`. This is for advanc
 ## Change Tone and Writing Style
 Run `gpt-tone` to edit the Tone of voice and the Writing Style of ChatGPT. To reset it to defaults, choose `1` for both options.
 
-*Hint:* Try choosing #23. You can ask it almost anything.
+*Tip:* Try choosing #23. You can ask it almost anything.
 
 ## Uninstall
 Follow these 3 commands:
