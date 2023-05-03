@@ -6,4 +6,8 @@ sed -i "s/engine=\".*\"/engine=\"text-davinci-003\"/" ~/CLI-GPT/gpt.py
 sed -i "s/tone=\".*\"/tone=\"\"/" ~/CLI-GPT/gpt.py
 sed -i "s/writingstyle=\".*\"/writingstyle=\"\"/" ~/CLI-GPT/gpt.py
 
+echo "ALWAYS_OVERWRITE_ALIASES=false" > ~/.config/cli-gpt.conf
+echo "ALWAYS_KEEP_API_KEY=false" >> ~/.config/cli-gpt.conf
+echo "UPDATE_NOTIFICATION=true" >> ~/.config/cli-gpt.conf
+
 echo -e "${G}Reverted to defaults successfully!${Off}"
