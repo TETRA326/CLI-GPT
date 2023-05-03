@@ -38,7 +38,8 @@ echo -e "2. Always keep API key                   ${BBlue}$keep_key${Cyan}"
 echo -e "3. Update notification                   ${BBlue}$noti \n${Cyan}"
 echo -e "4. Change ChatGPT's tone                 ${BBlue}[$tone_desc]${Cyan}"
 echo -e "5. Change ChatGPT's writing style        ${BBlue}[$style_desc]${Cyan}"
-echo -e "6. Change ChatGPT's engine               ${BBlue}[$engine]\n${Y}"
+echo -e "6. Change ChatGPT's engine               ${BBlue}[$engine]\n"
+echo -e "7. Revert to defaults                    ${BBlue} \n${Y}"
 read -p "Enter an option (x or q to leave): " -n 1 select
 echo ""
 }
@@ -257,6 +258,16 @@ clear
 update_options
 print_options
         ;;
+    7)
+    sed -i "s/engine=\".*\"/engine=\"text-davinci-003\"/" ~/CLI-GPT/gpt.py
+    sed -i "s/tone=\".*\"/tone=\"\"/" ~/CLI-GPT/gpt.py
+    sed -i "s/writingstyle=\".*\"/writingstyle=\"\"/" ~/CLI-GPT/gpt.py
+    
+    echo "ALWAYS_OVERWRITE_ALIASES=false" > ~/.config/cli-gpt.conf
+    echo "ALWAYS_KEEP_API_KEY=false" >> ~/.config/cli-gpt.conf
+    echo "UPDATE_NOTIFICATION=true" >> ~/.config/cli-gpt.conf
+    ;;
+    
     *)
         clear
         echo "Invalid option."
