@@ -72,7 +72,6 @@ fi
 aliases=(
     "alias gpt"
 )
-
 # Loop through the aliases and remove them from ~/.bashrc
 for alias in "${aliases[@]}"
 do
@@ -81,7 +80,7 @@ do
     then
         # If the alias exists, remove it
         sed -i "/^$alias/d" ~/.bashrc
-        echo -e "${B}Removed old aliases from '~/.bashrc'"
+        echo -e "${B}Removed old aliases from ${BBlue}'~/.bashrc'${Y}"
     fi
 done
 
