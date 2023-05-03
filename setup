@@ -60,6 +60,7 @@ add_aliases () {
   echo -e "${G}Aliases added successfully in ${BGreen}'~/.bash_aliases'${Off}"
 }
 
+# Check for .bash_aliases, create if not there
 if [ -f ~/.bash_aliases ]; then
     echo -e "Please understand ${BYellow}'~/.bash_aliases'${Off}${Y} will be overwritten! This is recommended for most users. "
     read -p "Do wish to continue? (Y/n): " overwrite_aliases
@@ -82,5 +83,6 @@ echo -e "${BBlue}gpt-update${B}    - update CLI-GPT code"
 echo -e "${BBlue}gpt-settings${B}  - change CLI-GPT settings"
 echo -e "${BBlue}gpt-default${B}   - revert engine, tone, and writing style to defaults${Off}"
 
+# Activate aliases by launching bash
 cd $HOME
 exec bash
