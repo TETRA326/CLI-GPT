@@ -42,7 +42,7 @@ rm -rf CLI-GPT/
 echo -e "\n${Cyan}Welcome to the updater for CLI-GPT!${Off}\n"
 
 # Clone into Repo
-git clone https://github.com/TETRA326/CLI-GPT.git
+git clone -q https://github.com/TETRA326/CLI-GPT.git
 
 # Check for required packages
 if python3 -c "import openai" &> /dev/null; then
