@@ -266,6 +266,9 @@ print_options
     echo "ALWAYS_OVERWRITE_ALIASES=false" > ~/.config/cli-gpt.conf
     echo "ALWAYS_KEEP_API_KEY=false" >> ~/.config/cli-gpt.conf
     echo "UPDATE_NOTIFICATION=true" >> ~/.config/cli-gpt.conf
+    clear
+    update_options
+    print_options
     ;;
     
     *)
