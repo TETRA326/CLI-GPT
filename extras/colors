@@ -10,6 +10,7 @@ Y='\033[0;33m'       # Yellow
 B='\033[0;34m'         # Blue
 P='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
+Grey='\033[0;37m'         # Grey
 # Bold
 BBlack='\033[1;30m'       # Black
 BRed='\033[1;31m'         # Red
