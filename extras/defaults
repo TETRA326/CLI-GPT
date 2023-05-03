@@ -5,6 +5,8 @@ source ~/CLI-GPT/extras/colors
 sed -i "s/engine=\".*\"/engine=\"text-davinci-003\"/" ~/CLI-GPT/gpt.py
 sed -i "s/tone=\".*\"/tone=\"\"/" ~/CLI-GPT/gpt.py
 sed -i "s/writingstyle=\".*\"/writingstyle=\"\"/" ~/CLI-GPT/gpt.py
+sed -i "s/tone_desc=\".*\"/tone_desc=\"Default\"/" ~/CLI-GPT/gpt.py
+sed -i "s/style_desc=\".*\"/style_desc=\"Default\"/" ~/CLI-GPT/gpt.py
 
 echo "ALWAYS_OVERWRITE_ALIASES=false" > ~/.config/cli-gpt.conf
 echo "ALWAYS_KEEP_API_KEY=false" >> ~/.config/cli-gpt.conf
