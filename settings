@@ -5,6 +5,7 @@ source ~/CLI-GPT/extras/colors
 
 config_file="$HOME/.config/cli-gpt.conf"
 
+# Get current values from config
 update_options () {
 source $config_file
 style_desc=$(grep "style_desc" ~/CLI-GPT/gpt.py | awk -F'"' '{print $2}')
