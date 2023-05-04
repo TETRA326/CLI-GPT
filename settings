@@ -117,7 +117,7 @@ echo "21. Sympathetic"
 echo "22. Tentative"
 echo -e "23. Warm ${Off} \n"
 
-read -p "Enter a number: " tone_choice
+read -p "Enter a number: " -n 1 tone_choice
 
 case $tone_choice in
     1) tone=""; tone_desc="Default";;
@@ -190,7 +190,7 @@ echo -e "28. Mongo Tom"
 echo -e "29. Brett"
 echo -e "30. Logan${Off} \n"
 
-read -p "Enter a number: " style_choice
+read -p "Enter a number: " -n 1 style_choice
 
 case $style_choice in
     1) writingstyle=""; style_desc="Default";;
@@ -240,7 +240,7 @@ echo "3. Curie 1"
 echo "4. Babbage 1"
 echo -e "5. ADA 1 ${Y} \n"
 
-read -p "Enter a number: " choice
+read -p "Enter a number: " -n 1 choice
 
 case $choice in
     1) engine="text-davinci-003";;
