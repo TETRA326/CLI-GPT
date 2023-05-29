@@ -88,4 +88,4 @@ And if you chose to overwrite `.bash_aliases`:
 rm ~/.bash_aliases
 ```
 ## Support
-Join our public [Discord](https://discord.gg/NCXRYSmx2a) or DM TΞTRΛ#9264 for any help.
+Join our public [Discord](https://discord.gg/cUnkxxfJ5b), DM TΞTRΛ#9264, or, if you cannot use Discord, email me at `captainzach_326@outlook.com`.
