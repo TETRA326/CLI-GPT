@@ -69,10 +69,10 @@ gpt-update
 ```
 
 ## Change OpenAI Engine
-You can change the engine that you use by using `gpt-engine`. This is for advanced users, but you may want to try different engines if the default results don't meet standards.
+You can change the engine that you use by using `gpt-settings`. This is for advanced users, but you may want to try different engines if the default results don't meet standards.
 
 ## Change Tone and Writing Style
-Run `gpt-tone` to edit the Tone of voice and the Writing Style of ChatGPT. To reset it to defaults, choose `1` for both options.
+Run `gpt-settings` to edit the Tone of voice and the Writing Style of ChatGPT. To reset it to defaults, choose `1` for both options.
 
 *Tip:* Try choosing #23. You can ask it almost anything.
 
